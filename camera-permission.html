@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camera Access - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  /* Fallback if Tailwind fails */
+ .bg-brand { background-color: #E8622A; }
+ .border-brand { border-color: #E8622A; }
+ .text-brand { color: #E8622A; }
+</style>
+</head>
+<body class="bg-black">
+<main class="w-full max-w-[390px] mx-auto min-h-screen flex-col">
+
+  <!-- Back + QR preview -->
+  <div class="px-6 pt-3 flex-1 flex-col">
+    <a href="home.html" class="text-white mb-8">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+      </svg>
+    </a>
+
+    <!-- QR Scanner preview -->
+    <div class="relative w-56 h-56 mx-auto opacity-40 flex-1 flex items-center">
+      <div class="absolute inset-0">
+        <div class="absolute top-0 left-0 w-10 h-10 border-t-4 border-l-4 border-brand rounded-tl-lg"></div>
+        <div class="absolute top-0 right-0 w-10 h-10 border-t-4 border-r-4 border-brand rounded-tr-lg"></div>
+        <div class="absolute bottom-0 left-0 w-10 h-10 border-b-4 border-l-4 border-brand rounded-bl-lg"></div>
+        <div class="absolute bottom-0 right-0 w-10 h-10 border-b-4 border-r-4 border-brand rounded-br-lg"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- White card bottom sheet -->
+  <div class="bg-white rounded-t-3xl px-6 pt-8 pb-10">
+    <div class="flex flex-col items-center text-center">
+
+      <!-- Camera icon -->
+      <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+        <img src="mdi_camera.png" alt="">
+      </div>
+
+      <h2 class="text-xl font-bold text-black mb-2">Camera Access Needed</h2>
+      <p class="text-gray-600 text-sm leading-6 max-w-[280px] mx-auto mb-8">
+        ScanPass needs camera permission to scan attendee QR codes.
+      </p>
+
+      <button onclick="requestCamera()"
+        class="w-full bg-brand hover:opacity-90 text-white font-semibold py-2 rounded-xl text-base mb-3">
+        Allow Camera
+      </button>
+
+      <button onclick="goBack()"
+        class="w-full border-2 border-brand text-brand hover:bg-orange-50 font-semibold py-2 rounded-xl text-base">
+        Not Now
+      </button>
+    </div>
+  </div>
+</main>
+
+<script>
+function requestCamera() {
+  navigator.mediaDevices.getUserMedia({ video: true })
+  .then(() => window.location.href = 'scanner.html')
+  .catch((err) => {
+    window.location.href = 'camera-denied.html';
+  });
+}
+function goBack() { window.history.back(); }
+</script>
+</body>
+</html>

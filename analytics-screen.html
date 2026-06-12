@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics - ScanPass Organizer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+body { font-family: 'Inter', sans-serif; }
+</style>
+</head>
+<body>
+<div class="flex h-screen overflow-hidden">
+
+<!-- Sidebar -->
+<aside class="flex w-64 border-r border-gray-200 flex-col hidden md:flex shrink-0 h-screen">
+<div class="p-6">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 flex items-center justify-center">
+<img src="Frame 31.png">
+</div>
+<span class="text-xl font-bold">Scanpass</span>
+</div>
+</div>
+
+<nav class="flex-1 px-4 space-y-2">
+<a href="organizer-dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (13).png" class="w-4 h-4">
+Dashboard
+</a>
+<a href="event-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (1).png" class="w-4 h-4">
+Event
+</a>
+<a href="analytics-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-orange-50 text-orange-600 border-l-4 border-orange-500 font-medium">
+<img src="Icon (19).png" class="w-4 h-4">
+Analytics
+</a>
+<a href="team-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (3).png" class="w-4 h-4">
+Team
+</a>
+<a href="profile-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (4).png" class="w-4 h-4">
+Profile
+</a>
+</nav>
+<div class="p-4 border-t border-orange-200 space-y-2">
+<a href="create-event.html">
+<button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2.5 rounded-lg flex items-center justify-center gap-2">
+<img src="Icon (5).png" class="w-4 h-4">
+Create Event
+</button>
+</a>
+<a href="settings-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Container (7).png">
+Settings
+</a>
+<a href="support-screen.html" class="flex items-center gap-3 pl-7 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Container (8).png">
+Support
+</a>
+</div>
+</aside>
+
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto">
+<div class="p-6 md:p-8 max-w-7xl mx-auto">
+
+<!-- Top Bar -->
+<div class="flex items-center justify-between mb-6">
+<h1 class="text-2xl font-bold text-orange-700">Analytics</h1>
+<div class="flex-1 max-w-md mx-6">
+<div class="relative border rounded-lg">
+<img src="Icon (6).png" class="absolute left-3 top-3 w-5 h-5">
+<input type="text" placeholder="Search events, staff..." 
+class="w-full pl-10 pr-4 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-orange-200">
+</div>
+</div>
+<div class="flex items-center gap-2">
+
+    <a href="notification.html">
+        <button class="p-2 hover:bg-gray-100 -mr-4">
+<img src="Button.png" class="w-9 h-9">
+</button>
+    </a>
+    <a href="support-screen.html">
+        <button class="p-2 hover:bg-gray-100">
+<img src="Button (1).png" class="w-9 h-9">
+</button>
+    </a>
+    <a href="global-view-screen.html">
+<div class="flex items-center gap-2 pl-4 border-l border-gray-300">
+<div class="text-right">
+<p class="text-sm font-semibold text-gray-900">Global View</p>
+<p class="text-xs text-gray-500">All Venues</p>
+</div>
+<svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+</div>
+    </a>
+    </div>
+</div>
+
+<!-- Performance Overview Header -->
+<div class="flex items-center justify-between mb-6">
+    <div>
+    <h2 class="text-sm text-gray-900 mb-1">Performance Overview</h2>
+    <p class="text-xs text-gray-500">Real-time data synchronization from all event endpoints.</p>
+    </div>
+    <div class="flex items-center gap-3">
+    <button class="px-4 py-2 border border-[#E0BFB4] rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        Last 30 Days
+    </button>
+    <button class="px-5 py-2 bg-orange-700 hover:bg-orange-800 text-white rounded-lg text-sm font-semibold flex items-center gap-2 shadow-md">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+        Export Report
+    </button>
+    </div>
+</div>
+
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+    <!-- Total Tickets Sold -->
+    <div class="bg-[#FFF8F6] border-2 rounded-2xl p-5 border-gray-100">
+    <div class="flex items-center justify-between mb-3">
+        <div class="w-10 h-10 flex items-center justify-center">
+    <img src="Overlay (6).png">   
+    </div>
+        <span class="flex text-xs font-semibold text-green-600 bg-green-50 px-2 py-1 rounded-full"> <img src="Container (27).png" class="w-3 h-2"> &nbsp; 12%</span>
+    </div>
+        <p class="text-xs text-gray-600 mt-1">Total Tickets Sold</p>
+    <p class="text-xs">24,592</p>
+    </div>
+
+    <!-- Admitted -->
+    <div class="bg-[#FFF8F6] border-2 rounded-2xl p-5 border-gray-100">
+    <div class="flex items-center justify-between mb-3">
+        <div class="w-10 h-10 flex items-center justify-center">
+        <img src="Overlay (7).png">
+        </div>
+        <span class="flex text-xs font-semibold text-green-600 bg-green-50 px-2 py-0.5 rounded-full"><img src="Container (27).png" class="w-3 h-2"> &nbsp; 8%</span>
+    </div>
+    <p class="text-xs text-gray-600 mt-1">Admitted</p>
+    <p class="text-xs">18,240</p>
+    </div>
+
+    <!-- Not Scanned -->
+    <div class="bg-[#FFF8F6] border-2 rounded-2xl p-5 border-gray-100">
+    <div class="flex items-center justify-between mb-3">
+        <div class="w-10 h-10 flex items-center justify-center">
+        <img src="Overlay (8).png">    
+    </div>
+        <span class="flex text-xs font-semibold text-red-600 bg-red-50 px-2 py-0.5 rounded-full"><img src="faller.png" class="w-3 h-2"> &nbsp; 3%</span>
+    </div>
+    <p class="text-xs text-gray-600 mt-1">Not Scanned</p>
+    <p class="text-xs">6,352</p>
+    </div>
+
+    <!-- Total Revenue -->
+    <div class="bg-[#FFF8F6] rounded-2xl p-5 border-2 border-gray-100-2">
+    <div class="flex items-center justify-between mb-3">
+        <div class="w-10 h-10 flex items-center justify-center">
+        <img src="Overlay (9).png">
+    </div>
+        <span class="flex text-xs font-semibold text-green-600 bg-green-50 px-2 py-0.5 rounded-full"><img src="Container (27).png" class="w-3 h-2"> &nbsp; 24%</span>
+    </div>
+    <p class="text-xs text-gray-600 mt-1">Total Revenue</p>
+    <p class="text-xs">₦25,420,800</p>
+    </div>
+</div>
+
+
+<!-- Charts Row -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+<!-- Performance Trend -->
+<div class="bg-[#FFF8F6] lg:col-span-2 rounded-2xl p-6 border border-gray-100">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h3 class="mb-1 text-sm">Performance Trend</h3>
+<p class="text-xs text-gray-500">Daily attendance across all active events</p>
+</div>
+<div class="flex items-center gap-4 text-sm">
+<div class="flex items-center gap-2 border p-1 bg-gray-50 rounded-full">
+    <span class="w-3 h-3 text-xs bg-orange-700 border rounded-full"></span>
+    <span class="text-xs">This Month</span>
+</div>
+<div class="bg-gray-50 border rounded-full p-1 flex items-center gap-2">
+    <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+    <span class="text-xs">Last Month</span>
+</div>
+</div>
+</div>
+    
+    <!-- Line Chart Placeholder -->
+    <div class="h-64 relative">
+        <img src="Simulated Line Chart with SVG.png" class="w-full h-full">
+        <div class="absolute top-10 right-2 bg-gray-900 text-white w-24 text-xs px-3 py-2 rounded-lg">
+        <p class="pb-3">May 25</p>
+        <p>Attendance: 2,840</p>
+        </div>
+        <div class="flex justify-between text-xs text-gray-500 mt-2 pb-6">
+        <span>May 01</span>
+        <span>May 08</span>
+        <span>May 15</span>
+        <span>May 22</span>
+        <span>May 29</span>
+        </div>
+    </div>
+    </div>
+
+    <!-- Tickets Overview -->
+    <div class="bg-[#FFF8F6] rounded-2xl p-6 border-gray-100">
+    <h3 class="text-gray-900 text-xs mb-1">Tickets Overview</h3>
+    <p class="text-xs text-gray-500 mb-6">Sales breakdown by type</p>
+    
+    <!-- Donut Chart -->
+    <div class="flex items-center justify-center mb-6">
+        <div class="relative w-40 h-40">
+        <img src="Custom SVG Doughnut.png">
+        <div class="absolute inset-0 flex items-center justify-center flex-col">
+            <p class="text-sm">100%</p>
+            <p class="text-xs">ALLOCATED</p>
+        </div>
+        </div>
+    </div>
+
+    <div class="space-y-3 text-sm">
+        <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <span class="w-3 h-3 bg-orange-700 rounded-full"></span>
+            <span class="text-gray-700">VIP Access</span>
+        </div>
+        <span class="text-gray-900">30%</span>
+        </div>
+        <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <span class="w-3 h-3 bg-orange-500 rounded-full"></span>
+            <span class="text-gray-700">General</span>
+        </div>
+        <span class="text-gray-900">50%</span>
+        </div>
+        <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <span class="w-3 h-3 bg-orange-300 rounded-full"></span>
+            <span class="text-gray-700">Early Bird</span>
+        </div>
+        <span class="text-gray-900">20%</span>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- Top Performing Events -->
+<div>
+    <h3 class="text-gray-900 mb-4">Top Performing Events</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    
+    <!-- Afro Nation -->
+    <div class="bg-white rounded-2xl overflow-hidden border-gray-100 hover:shadow-md transition">
+        <div class="relative">
+        <img src="Container (16).png" class="w-full h-40 object-cover" alt="Afro Nation">
+        <span class="absolute top-3 right-3 px-3 py-1 bg-green-500 text-white text-xs font-bold rounded-full">LIVE</span>
+        </div>
+        <div class="p-4">
+        <h4 class="text-sm mb-1">Afro Nation Lagos 2026</h4>
+        <p class="text-sm text-gray-500 mb-3">National Stadium, Surulere, Lagos</p>
+        <p class="text-xs text-gray-600 mb-2">Sales Target <span class="font-semibold text-orange-700 float-right">98% reached</span></p>
+        <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-orange-700 h-2 rounded-full" style="width: 98%"></div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Africa AI Submit -->
+    <div class="bg-white rounded-2xl overflow-hidden border-gray-100 hover:shadow-md transition">
+        <div class="relative">
+        <img src="Gala Dinner (1).png" class="w-full h-40 object-cover" alt="Africa AI">
+        <span class="absolute top-3 right-3 px-3 py-1 bg-blue-500 text-white text-xs font-bold rounded-full">UPCOMING</span>
+        </div>
+        <div class="p-4">
+        <h4 class="text-sm text-gray-900 mb-1">Africa AI Submit</h4>
+        <p class="text-sm text-gray-500 mb-3">Civic Center, Lagos</p>
+        <p class="text-xs text-gray-600 mb-2">Sales Target <span class="font-semibold text-orange-700 float-right">72% reached</span></p>
+        <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-orange-700 h-2 rounded-full" style="width: 72%"></div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Olukoya Charity Gala -->
+     <a href="lagos-tech-analytics.html">
+    <div class="bg-white rounded-2xl overflow-hidden border-gray-100 hover:shadow-md transition">
+        <div class="relative">
+        <img src="lagostech.png" class="w-full h-40 object-cover" alt="Charity Gala">
+        <span class="absolute top-3 right-3 px-3 py-1 bg-gray-500 text-white text-xs font-bold rounded-full">COMPLETED</span>
+        </div>
+        <div class="p-4">
+        <h4 class="text-sm text-gray-900 mb-1">Lagos Tech Futures 2024</h4>
+        <p class="text-sm text-gray-500 mb-3">Landmark Centre, Lagos</p>
+        <p class="text-xs text-gray-600 mb-2">Sales Target <span class="font-semibold text-green-600 float-right">100% reached</span></p>
+        <div class="w-full bg-gray-200 rounded-full h-2">
+        <div class="bg-green-600 h-2 rounded-full" style="width: 100%"></div>
+        </div>
+        </div>
+    </div>
+    </a>
+    </div>
+</div>
+
+</div>
+</main>
+</div>
+</body>
+</html>

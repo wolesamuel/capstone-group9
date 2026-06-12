@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>Duplicate Alert - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white antialiased">
+<div class="w-full max-w-[390px] mx-auto min-h-screen flex-col">
+
+<!-- Header -->
+<header class="pt-11 px-5 h-14 flex items-center relative mb-8">
+<a href="alert.html" class="absolute left-5 w-8 h-8 flex items-center justify-center -ml-2 active:bg-gray-100 rounded-full transition" aria-label="Back">
+<img src="material-symbols_arrow-back.png" class="w-6 h-6">
+</a>
+<h1 class="text-lg font-semibold text-black mx-auto">Duplicate Alert</h1>
+</header>
+
+<!-- Content -->
+<div class="flex-1 px-6 pb-24 flex-col items-center">
+
+<!-- Red Shield Icon -->
+<div class="flex mb-6 justify-center">
+<img src="fluent_shield-error-32-filled (1).png" class="w-20 h-20">
+</div>
+
+<!-- Title + Subtitle -->
+<h2 class="text-2xl font-bold text-black text-center mb-2">Duplicate Ticket Detected!</h2>
+<p class="text-base text-xl font-semibold text-center mb-8 px-4">This ticket has already been scanned at another gate.</p>
+
+<!-- Details Card -->
+<div class="w-full bg-white border border-gray-200 rounded-xl p-5 space-y-4 mb-8">
+<div class="flex justify-between items-center">
+    <span>Ticket ID</span>
+    <span class="font-semibold">#098</span>
+</div>
+<div class="flex justify-between items-center">
+    <span>Gate (First Scan)</span>
+    <span class="font-semibold">Gate 1</span>
+</div>
+<div class="flex justify-between items-center">
+    <span>Current Gate</span>
+    <span class="font-semibold">Gate 2</span>
+</div>
+<div class="flex justify-between items-center">
+    <span>Time</span>
+    <span class="font-semibold">7:35 PM</span>
+</div>
+<div class="flex justify-between items-center">
+    <span>Attendee</span>
+    <span class="font-semibold">John Doe</span>
+</div>
+</div>
+
+<!-- CTA Button -->
+<a href="scanner.html" class="w-full bg-[#E8622A] px-24 text-white font-bold py-3.5 rounded-xl text-center active:bg-[#d55a26] transition">
+Scan another ticket
+</a>
+</div>
+
+<!-- Bottom Nav -->
+<nav class="fixed bg-orange-50 shadow-3xl bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[390px] bg-white border-t border-gray-200 px-6 py-2">
+  <div class="flex justify-between items-center">
+    <a href="check-in-history.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="material-symbols_book-outline (6).png" class="w-6 h-6">
+      <span class="text-xs">History</span>
+    </a>
+    <a href="alerts.html" class="flex-col items-center gap-1 text-gray-400">
+   <img src="material-symbols_book-outline (2).png" class="w-6 h-6">
+      <span class="text-xs font-xs">Alerts</span>
+    </a>
+    <a href="scanner.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="Home (1).png" class="w-10 h-10">
+    </a>
+    <a href="help.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="material-symbols_book-outline (3).png" class="w-6 h-6">
+      <span class="text-xs">Help</span>
+    </a>
+    <a href="staff-profile.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="material-symbols_book-outline (5).png" class="w-6 h-6">
+      <span class="text-xs">Profile</span>
+    </a>
+  </div>
+</nav>
+</div>
+</body>
+</html>

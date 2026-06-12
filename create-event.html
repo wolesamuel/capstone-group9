@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Event - ScanPass Organizer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+body { font-family: 'Inter', sans-serif; }
+</style>
+</head>
+<body>
+<div class="flex h-screen overflow-hidden">
+
+<!-- Sidebar -->
+<aside class="flex w-64 flex-col border-r hidden md:flex shrink-0 h-screen">
+<div class="p-6">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 flex items-center justify-center">
+<img src="Frame 31.png">
+</div>
+<span class="text-xl font-bold">Scanpass</span>
+</div>
+</div>
+
+<nav class="flex-1 px-4 space-y-2">
+<a href="organizer-dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (13).png" class="w-4 h-4">
+Dashboard
+</a>
+<a href="event-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (1).png" class="w-4 h-4">
+Event
+</a>
+<a href="analytics-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (2).png" class="w-4 h-4">
+Analytics
+</a>
+<a href="team-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (3).png" class="w-4 h-4">
+Team
+</a>
+<a href="profile-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (4).png" class="w-4 h-4">
+Profile
+</a>
+</nav>
+
+<div class="p-4 border-t border-orange-200 space-y-2">
+<a href="settings-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Container (7).png">
+Settings
+</a>
+<a href="support-screen.html" class="flex items-center gap-3 pl-7 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Container (8).png">
+Support
+</a>
+</div>
+</aside>
+
+
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto">
+<div class="p-6 md:p-8 max-w-5xl mx-auto">
+
+<!-- Top Bar -->
+<div class="flex items-center justify-between mb-6">
+<a href="event-screen.html" class="flex items-center gap-2 text-orange-700 font-medium hover:underline">
+	<img src="material-symbols_arrow-back.png" class="w-5 h-5">
+	Back to Event
+</a>
+<div class="flex-1 max-w-md mx-6">
+	<div class="relative border border-orange-100 rounded-lg">
+	<img src="Icon (6).png" class="absolute left-3 top-3 w-5 h-5">
+	<input type="text" placeholder="Search events, staff..." 
+	class="w-full pl-10 pr-4 py-2.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-orange-200">
+	</div>
+</div>
+<div class="flex items-center gap-2">
+	<a href="notification.html">
+		<button class="p-2 hover:bg-gray-100 -mr-4">
+	<img src="Button.png" class="w-9 h-9">
+	</button>
+	</a>
+	<a href="support-screen.html">
+		<button class="p-2 hover:bg-gray-100">
+	<img src="Button (1).png" class="w-9 h-9">
+	</button>
+	</a>
+	
+	<a href="profile-screen.html">
+	<div class="flex items-center gap-3 pl-4 border-l border-orange-200">
+		<div class="text-right">
+			<p class="text-sm font-semibold">Chisom Okoli</p>
+			<p class="text-xs text-gray-500">Event Manager</p>
+		</div>
+		<img src="Manager Avatar.png" class="w-10 h-10">
+	</div>
+	</a>
+</div>
+</div>
+
+<!-- Form -->
+<form class="p-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+	
+	<!-- Event Name -->
+	<div>
+		<label class="block text-sm font-medium text-gray-700 mb-2">Event Name</label>
+		<input type="text" placeholder="Enter event name" 
+			class="w-full px-4 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-orange-200">
+	</div>
+
+	<!-- Event Type -->
+	<div>
+		<label class="block text-sm font-medium text-gray-700 mb-2">Event Type</label>
+		<div class="relative">
+			<select class="w-full px-4 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-orange-200">
+				<option>Select type</option>
+				<option>Concert</option>
+				<option>Conference</option>
+				<option>Workshop</option>
+				<option>Festival</option>
+			</select>
+		</div>
+	</div>
+
+	<!-- Date -->
+	<div>
+		<label class="block text-sm font-medium text-gray-700 mb-2">Date</label>
+		<div class="relative">
+			<input type="date" placeholder="Select date"
+				class="w-full px-4 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-orange-200">
+			
+		</div>
+	</div>
+
+	<!-- Time -->
+	<div>
+		<label class="block text-sm font-medium text-gray-700 mb-2">Time</label>
+		<div class="relative">
+			<input type="time" placeholder="Select time"
+				class="w-full px-4 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-orange-200">
+		</div>
+	</div>
+
+	<!-- Location -->
+	<div>
+		<label class="block text-sm font-medium text-gray-700 mb-2">Location / Venue</label>
+		<div class="relative">
+			<input type="text" placeholder="Enter address"
+				class="w-full px-4 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-orange-200">
+		</div>
+	</div>
+
+	<!-- Expected Capacity -->
+	<div>
+		<label class="block text-sm font-medium text-gray-700 mb-2">Expected Capacity</label>
+		<input type="number" placeholder="e.g 500"
+			class="w-full px-4 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-orange-200">
+	</div>
+
+	<!-- Number of Tickets -->
+	<div>
+		<label class="block text-sm font-medium text-gray-700 mb-2">Number of Tickets</label>
+		<div class="relative">
+			<input type="number" placeholder="e.g 100"
+			class="w-full px-4 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-orange-200">
+		</div>
+	</div>
+
+	<!-- Ticket Price -->
+	<div>
+		<label class="block text-sm font-medium text-gray-700 mb-2">Ticket Price</label>
+		<input type="text" placeholder="e.g ₦25000"
+			class="w-full px-4 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-orange-200">
+	</div>
+</div>
+
+<!-- Banner Upload -->
+<div class="mb-8">
+	<label class="block text-sm font-medium text-gray-700 mb-2">Banner Image Upload</label>
+	<label class="flex flex-col items-center justify-center w-full h-40 border-2 border-dashed border-orange-100 rounded-lg cursor-pointer hover:bg-orange-50 transition">
+		<div class="flex flex-col items-center justify-center pt-5 pb-6">
+			<img src="Icon (14).png" class="mb-2">
+			<p class="mb-1 text-base font-medium text-gray-700">Upload banner image</p>
+			<p class="text-xs text-gray-500">JPEG, PNG up to 10MB (16:9 recommended)</p>
+		</div>
+		<input type="file" class="hidden" accept="image/jpeg,image/png"/>
+	</label>
+</div>
+
+<!-- Submit Button -->
+<div class="flex justify-center">
+	<button type="submit" class="bg-[#E8622A] hover:bg-orange-600 text-white font-semibold px-12 py-2 rounded-lg transition">
+		Create Event
+	</button>
+</div>
+</form>
+</div>
+</main>
+</div>
+</body>
+</html>

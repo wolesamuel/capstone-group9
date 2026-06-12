@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>Check-in History - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white antialiased">
+<div class="w-full max-w-[390px] mx-auto min-h-screen flex-col">
+
+<!-- Header -->
+<header class="pt-11 px-5 h-14 flex items-center justify-center relative mb-4">
+  <a href="scanner.html" class="absolute left-5 w-8 h-8 flex items-center justify-center -ml-2 active:bg-gray-100 rounded-full transition" aria-label="Back">
+    <img src="material-symbols_arrow-back.png" class="w-6 h-6">
+  </a>
+  <h1 class="text-lg font-semibold text-black -ml-20">Check-in History</h1>
+</header>
+
+<!-- Filters - Ultra compact so Offline shows fully -->
+<div class="px-4 mb-4">
+  <div class="flex gap-1">
+    <button class="flex-1 px-2 py-1.5 bg-orange-100 border border-[#E8622A] rounded-lg text-[10px] font-medium whitespace-nowrap">All</button>
+    <a href="verified-records.html">
+      <button class="flex-1 px-2 py-1.5 rounded-lg border text-[10px] font-medium whitespace-nowrap">Verified</button>
+    </a>
+    <button class="flex-1 px-2 py-1.5 rounded-lg border text-[10px] font-medium whitespace-nowrap">Expired</button>
+    <button class="flex-1 px-2 py-1.5 rounded-lg border text-[10px] font-medium whitespace-nowrap">Invalid</button>
+    <button class="flex-1 px-2 py-1.5 rounded-lg border text-[10px] font-medium whitespace-nowrap">Duplicate</button>
+    <a href="offline-records.html">
+      <button class="flex-1 px-2 py-1.5 rounded-lg border text-[10px] font-medium whitespace-nowrap">Offline</button>
+    </a>
+  
+  </div>
+</div>
+
+<!-- Check-in List -->
+<div class="flex-1 px-5 pb-24 space-y-2">
+
+  <!-- Peter Ojaja - Verified -->
+  <a href="checkin-detail.html" class="flex items-center gap-3 py-3 border px-2 rounded-xl border-gray-100 active:bg-gray-50">
+    <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+      <img src="Frame 500 (18).png" class="w-9 h-9">
+    </div>
+    <div class="flex-1 min-w-0">
+      <p class="font-semibold text-black text-">Peter Ojaja</p>
+      <p class="text-sm text-gray-500">TKT-8F7A-2D9K</p>
+      <p class="text-sm text-green-600 font-medium">Verified Successfully</p>
+    </div>
+    <div class="text-right">
+      <p class="text-sm">10:45 AM</p>
+      <p class="text-sm">Simon G.</p>
+    </div>
+    <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+    </svg>
+  </a>
+
+  <!-- Favour Okeke - Verified Offline -->
+  <a href="checkin-detail.html" class="flex items-center gap-3 py-3 border px-2 rounded-xl border-gray-100 active:bg-gray-50">
+    <div class="w-10 h-10 bg-orange-400 rounded-lg flex items-center justify-center flex-shrink-0">
+      <img src="Frame 500 (9).png" class="w-9 h-9">
+    </div>
+    <div class="flex-1 min-w-0">
+      <p class="font-semibold text-black text-">Favour Okeke</p>
+      <p class="text-sm text-gray-500">TKT-563A-8HY</p>
+      <p class="text-sm text-orange-500 font-medium">Verified Offline</p>
+    </div>
+    <div class="text-right flex-shrink-0">
+      <p class="text-sm text-black">10:47 AM</p>
+      <p class="text-sm">Joseph P.</p>
+    </div>
+    <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+    </svg>
+  </a>
+
+  <!-- Bisola Ayeni - Already Checked In -->
+  <a href="checkin-detail.html" class="flex items-center gap-3 py-3 border px-2 rounded-xl border-gray-100 active:bg-gray-50">
+    <div class="w-10 h-10 bg-orange-300 rounded-lg flex items-center justify-center flex-shrink-0">
+      <img src="Frame 500 (19).png" class="w-9 h-9">
+    </div>
+    <div class="flex-1 min-w-0">
+      <p class="font-semibold text-black text-">Bisola Ayeni</p>
+      <p class="text-sm text-gray-500">TKT-895B-7GOJ</p>
+      <p class="text-sm text-orange-500 font-medium">Already Checked In</p>
+    </div>
+    <div class="text-right flex-shrink-0">
+      <p class="text-sm text-black">10:50 AM</p>
+      <p class="text-sm">Dele O.</p>
+    </div>
+    <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+    </svg>
+  </a>
+
+  <!-- John Ayo - Ticket Expired -->
+  <a href="checkin-detail.html" class="flex items-center gap-3 py-3 border px-2 rounded-xl border-gray-100 active:bg-gray-50">
+    <div class="w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
+      <img src="Frame 500 (20).png" class="w-9w h-9">
+    </div>
+    <div class="flex-1 min-w-0">
+      <p class="font-semibold text-black text-">John Ayo</p>
+      <p class="text-sm text-gray-500">TKT-308F-5R9J</p>
+      <p class="text-sm text-red-600 font-medium">Ticket Expired</p>
+    </div>
+    <div class="text-right flex-shrink-0">
+      <p class="text-sm text-black">10:53 AM</p>
+      <p class="text-sm">Chuka U.</p>
+    </div>
+    <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+    </svg>
+  </a>
+
+  <!-- Felicia Owolabi - Screenshot Detected -->
+  <a href="checkin-detail.html" class="flex items-center gap-3 py-3 border px-2 rounded-xl border-gray-100 active:bg-gray-50">
+    <div class="w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
+      <img src="Frame 500 (21).png" class="w-9 h-9">
+    </div>
+    <div class="flex-1 min-w-0">
+      <p class="font-semibold text-black text-">Felicia Owolabi</p>
+      <p class="text-sm text-gray-500">TKT-395D-8W4E</p>
+      <p class="text-sm text-red-600 font-medium">Screenshot Detected</p>
+    </div>
+    <div class="text-right flex-shrink-0">
+      <p class="text-sm text-black">10:54 AM</p>
+      <p class="text-sm">Thomas A.</p>
+    </div>
+    <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+    </svg>
+  </a>
+
+  <!-- Unknown - Invalid QR -->
+  <a href="checkin-detail.html" class="flex items-center gap-3 py-3 border px-2 rounded-xl border-gray-100 active:bg-gray-50">
+    <div class="w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
+      <img src="Frame 500 (22).png" class="w-9 h-9">
+    </div>
+    <div class="flex-1 min-w-0">
+      <p class="font-semibold text-black text-">Unknown</p>
+      <p class="text-sm text-gray-500">Invalid QR Code</p>
+      <p class="text-sm text-red-600 font-medium">Ticket Not Recognized</p>
+    </div>
+    <div class="text-right flex-shrink-0">
+      <p class="text-sm">10:58 AM</p>
+      <p class="text-sm">Dele O.</p>
+    </div>
+    <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+    </svg>
+  </a>
+
+  <!-- Justin Uwalaka - Yet to Sync -->
+  <a href="checkin-detail.html" class="flex items-center gap-3 py-3 border px-2 rounded-xl border-gray-100 active:bg-gray-50">
+    <div class="w-10 h-10 bg-gray-400 rounded-lg flex items-center justify-center flex-shrink-0">
+      <img src="Frame 500 (23).png" class="w-9 h-9">
+    </div>
+    <div class="flex-1 min-w-0">
+      <p class="font-semibold text-black text-">Justin Uwalaka</p>
+      <p class="text-sm text-gray-500">TKT-639H-5F7K</p>
+      <p class="text-sm text-gray-500 font-medium">Yet to Sync</p>
+    </div>
+    <div class="text-right flex-shrink-0">
+      <p class="text-sm">11:00 AM</p>
+      <p class="text-sm">Joseph P.</p>
+    </div>
+    <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+    </svg>
+  </a>
+</div>
+
+<!-- Bottom Nav -->
+<nav class="fixed bg-orange-50 shadow-3xl bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[390px] bg-white border-t border-gray-200 px-6 py-2">
+  <div class="flex justify-between items-center">
+    <a href="check-in-history.html" class="flex-col items-center gap-1 text-[#E8622A]">
+      <img src="material-symbols_book-outline (4).png" class="w-6 h-6">
+      <span class="text-xs font-medium">History</span>
+    </a>
+    <a href="alert.html" class="flex-col items-center gap-1 text-gray-400">
+   <img src="material-symbols_book-outline (2).png" class="w-6 h-6">
+      <span class="text-xs">Alerts</span>
+    </a>
+    <a href="scanner.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="Home (1).png" class="w-10 h-10">
+    </a>
+    <a href="help.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="material-symbols_book-outline (3).png" class="w-6 h-6">
+      <span class="text-xs">Help</span>
+    </a>
+    <a href="staff-profile.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="material-symbols_book-outline (5).png" class="w-6 h-6">
+      <span class="text-xs">Profile</span>
+    </a>
+  </div>
+</nav>
+
+</div>
+</body>
+</html>

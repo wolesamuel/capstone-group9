@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScanPass - Location</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex justify-center">
+  <div class="w-full max-w-sm px-6 py-8 flex-col min-h-screen flex">
+    <!-- Skip button -->
+    <div class="flex justify-end mb-2">
+      <a href="interest.html" class="text-gray-500 text-sm font-medium">Skip ></a>
+    </div>
+
+    <!-- Heading -->
+    <div class="mb-6">
+      <h1 class="text-3xl font-bold text-black leading-tight mb-3 max-w-[20rem]">
+        Where do you want to attend events most?
+      </h1>
+      <p class="text-gray-600 text-base leading-relaxed">
+        We'll use your location to recommend nearby events, faster check-ins, and relevant updates.
+      </p>
+    </div>
+
+    <!-- Illustration -->
+    <div class="flex-1 flex items-center justify-center -mt-10">
+      <img src="Untitled-1 3 (1).png">
+    </div>
+
+    <!-- Button -->
+		 <a href="locationpick.html">
+			<button onclick="getLocation()" class="w-full bg-[#E8622A] hover:bg-[#d15826] text-white font-semibold py-4 rounded-xl transition">
+      Select Location
+    </button>
+		</a>
+</body>
+</html>

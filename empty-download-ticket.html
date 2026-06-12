@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>My Ticket - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: '#E8622A'
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-white antialiased">
+<main class="w-full max-w-[390px] mx-auto min-h-screen pt-3 px-6 pb-24 flex-col">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between mb-12">
+    <a href="mytickets.html" class="inline-flex" aria-label="Go back">
+      <img src="material-symbols_arrow-back.png" alt="">
+    </a>
+    <h1 class="text-lg font-bold text-black">My Ticket</h1>
+    <a href="contact-support.html" class="w-6 h-6 flex items-center justify-center">
+      <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+    </a>
+  </header>
+
+  <!-- Content - Center -->
+  <section class="flex-1 flex-col items-center justify-center text-center">
+
+    <!-- QR Placeholder -->
+    <div class="w-48 h-48 mx-auto mb-8">
+      <img src="mdi_qrcode-scan.png" alt="">
+    </div>
+
+    <!-- Title -->
+    <h2 class="text-xl font-bold text-black mb-2 leading-tight">
+      Your downloaded ticket<br>will appear here!
+    </h2>
+
+    <!-- Subtitle -->
+    <p class="text-sm leading-6 max-w-[260px] mx-auto mb-12">
+      When ticket is downloaded, it will be shown here.
+    </p>
+
+    <!-- Help Link -->
+    <a href="contact-support.html" class="text-brand text-sm font-medium">
+      Need help? Contact support
+    </a>
+  </section>
+
+ 
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-100 z-50">
+<div class="max-w-[390px] mx-auto px-[8px] pt-[6px] pb-[calc(6px+env(safe-area-inset-bottom))]">
+	<div class="flex items-center justify-around h-[60px]">
+
+		<a href="eventdiscovery.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+			<img src="majesticons_home.png" class="w-[24px] h-[24px] text-gray-400">
+			<span class="text-[10px] font-medium text-gray-400">Discover</span>
+		</a>
+
+		<a href="favourites.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+			<img src="material-symbols_book-outline.png" class="w-[24px] h-[24px] text-gray-400">
+			<span class="text-[10px] font-medium text-gray-400">Favourites</span>
+		</a>
+
+		<!-- Active -->
+		<a href="ticketview.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+			<div class="w-[48px] h-[48px] bg-[#E8622A] rounded-full flex items-center justify-center -mt-[16px] shadow-[0_4px_16px_rgba(232,98,42,0.35)]">
+				<img src="ep_ticket (1).png" class="w-[24px] h-[24px]">
+			</div>
+		</a>
+
+		<a href="attendeealert.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+			<img src="material-symbols_book-outline (2).png" class="w-[24px] h-[24px]">
+			<span class="text-[10px] font-medium text-gray-400">Alerts</span>
+		</a>
+
+		<a href="profile.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+			<img src="gg_profile.png" class="w-[24px] h-[24px]">
+			<span class="text-[10px] font-medium text-gray-400">Profile</span>
+		</a>
+	</div>
+  </nav>
+</main>
+</body>
+</html>

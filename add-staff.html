@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Team Member - ScanPass</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-white">
+  <div class="flex h-screen overflow-hidden">
+
+<!-- Sidebar -->
+<aside class="flex w-64 border-r border-gray-200 flex-col hidden md:flex shrink-0 h-screen">
+<div class="p-6">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 flex items-center justify-center">
+<img src="Frame 31.png">
+</div>
+<span class="text-xl font-bold">Scanpass</span>
+</div>
+</div>
+
+<nav class="flex-1 px-4 space-y-2">
+<a href="organizer-dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (13).png" class="w-4 h-4">
+Dashboard
+</a>
+<a href="event-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (1).png" class="w-4 h-4">
+Event
+</a>
+<a href="analytics-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (2).png" class="w-4 h-4">
+Analytics
+</a>
+<a href="team-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-orange-50 text-orange-600 border-l-4 border-orange-500 font-medium">
+<img src="staffpics (7).png" class="w-4 h-4">
+Team
+</a>
+<a href="profile-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (4).png" class="w-4 h-4">
+Profile
+</a>
+</nav>
+<div class="p-4 border-t border-orange-200 space-y-2">
+<a href="create-event.html">
+<button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2.5 rounded-lg flex items-center justify-center gap-2">
+<img src="Icon (5).png" class="w-4 h-4">
+Create Event
+</button>
+</a>
+<a href="settings-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Container (7).png">
+Settings
+</a>
+<a href="support-screen.html" class="flex items-center gap-3 pl-7 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Container (8).png">
+Support
+</a>
+</div>
+</aside>
+
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto">
+<div class="p-6 md:p-8 max-w-7xl mx-auto">
+
+<!-- Top Bar -->
+<div class="flex items-center justify-between mb-6">
+<a href="team-screen.html" class="flex items-center gap-2 text-orange-700 font-medium hover:underline">
+<img src="material-symbols_arrow-back.png" class="w-5 h-5">
+Back to Team
+</a>
+<div class="flex-1 max-w-md mx-6">
+<div class="relative border rounded-lg">
+<img src="Icon (6).png" class="absolute left-3 top-3 w-5 h-5">
+<input type="text" placeholder="Search events, staff..." 
+class="w-full pl-10 pr-4 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-orange-200">
+</div>
+</div>
+<div class="flex items-center gap-2">
+  <a href="notification.html">
+    <button class="p-2 hover:bg-gray-100 -mr-4">
+<img src="Button.png" class="w-9 h-9">
+</button>
+  </a>
+  <a href="support-screen.html">
+    <button class="p-2 hover:bg-gray-100">
+<img src="Button (1).png" class="w-9 h-9">
+</button>
+  </a>
+  <a href="profile-screen.html">
+    <div class="flex items-center gap-3 pl-4 border-l border-orange-200">
+    <div class="text-right">
+        <p class="text-sm font-semibold">Chisom Okoli</p>
+        <p class="text-xs text-gray-500">Event Manager</p>
+    </div>
+    <img src="Manager Avatar.png" class="w-10 h-10">
+</div>
+  </a>
+
+
+
+</div>
+</div>
+  <!-- Form Content -->
+  <div>
+    <p class="text-gray-600 mb-6 max-w-3xl">Fill in the details below to grant access to a new team member. They will receive an email to activate their account.</p>
+
+    <!-- Banner Image -->
+    <img src="Frame 273 (1).png" class="w-full h-64 object-cover rounded-xl mb-8" alt="Team working">
+
+    <!-- Form -->
+    <form class="space-y-6 max-w-2xl">
+      <!-- Staff Name -->
+      <div>
+        <label class="block text-base font-medium text-gray-900 mb-2">Staff Name</label>
+        <input type="text" placeholder="Enter full name"
+          class="border w-full px-4 py-3 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-900 placeholder-gray-400">
+      </div>
+
+      <!-- Email Address -->
+      <div>
+        <label class="block text-base font-medium text-gray-900 mb-2">Email Address</label>
+        <input type="email" placeholder="e.g. staff@example.com"
+          class="border w-full px-4 py-3 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-900 placeholder-gray-400">
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label class="block text-base font-medium text-gray-900 mb-2">Password</label>
+        <div class="relative">
+          <input type="password" id="password" placeholder="Create a temporary password"
+            class="border w-full px-4 py-3 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-900 placeholder-gray-400 pr-12">
+          <button type="button" onclick="togglePassword()" class="absolute right-4 top-3.5 text-gray-400 hover:text-gray-600">
+            <svg id="eyeIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3.5 rounded-lg flex items-center justify-center gap-2 transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
+        </svg>
+        Add Staff Member
+      </button>
+    </form>
+  </div>
+
+</div>
+</main>
+</div>
+
+<script>
+function togglePassword() {
+const input = document.getElementById('password');
+const icon = document.getElementById('eyeIcon');
+if (input.type === 'password') {
+  input.type = 'text';
+  icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"/>';
+} else {
+  input.type = 'password';
+  icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>';
+}
+}
+</script>
+</body>
+</html>

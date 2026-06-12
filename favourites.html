@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>Favorites - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="w-full max-w-[390px] mx-auto min-h-screen pb-24">
+
+<!-- Header -->
+<header class="pt-11 pb-8 px-5 h-14 flex items-center justify-center relative">
+<a href="eventdiscovery.html" class="absolute left-5 w-8 h-8 flex items-center justify-center -ml-2 active:bg-gray-100 rounded-full transition" aria-label="Back">
+<img src="material-symbols_arrow-back.png" class="w-6 h-6">
+</a>
+<h1 class="text-lg font-bold tracking-wide uppercase">Favorites</h1>
+</header>
+
+<!-- Content -->
+<section class="px-5 mt-3 space-y-4">
+
+<!-- Search Bar -->
+<div class="relative border rounded-xl border-black">
+<img src="Vector (6).png" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5">
+<input
+    type="text"
+    placeholder="Search Favorites"
+    class="w-full h-12 pl-11 pr-12 border-gray-300 rounded-xl text- text-black placeholder-gray-500 focus:outline-none focus:border-[#E8622A] focus:ring-1 focus:ring-[#E8622A] bg-white transition"
+>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center">
+    <img src="Vector (5).png" class="w-5 h-5">
+</button>
+</div>
+
+<!-- Filter Tabs -->
+<div class="flex gap-2 pb-1 -mx-5 px-5">
+<button class="border px-4 py-1.5 bg-[#FFE8DD] border-[#E8622A] rounded-2xl text-sm font-medium text-[#E8622A] whitespace-nowrap">
+    All
+</button>
+<button class="px-4 py-1.5 border bg-white border-black rounded-2xl text-sm font-medium text-black whitespace-nowrap active:bg-gray-50">
+    Sessions
+</button>
+<button class="px-4 py-1.5 bg-white border-black border rounded-2xl text-sm font-medium text-black whitespace-nowrap active:bg-gray-50">
+    Speakers
+</button>
+<button class="px-4 py-1.5 bg-white border-black border rounded-2xl text-sm font-medium text-black whitespace-nowrap active:bg-gray-50">
+    Exhibitors
+</button>
+</div>
+
+<!-- Empty State -->
+<div class="flex flex-col items-center justify-center pt-16 pb-8">
+<img src="Vector (7).png" class="w-8 h-8 mb-3">
+<h3 class="text- font-semibold text-black mb-2">No Favourites Yet</h3>
+<p class="text- text-gray-600 text-center leading-relaxed px-8">
+    Save sessions, speakers, and exhibitors<br>to access them during the event.
+</p>
+</div>
+
+<!-- Explore Events Button -->
+ <a href="eventdiscovery.html">
+    <button class="w-full h-12 bg-[#E8622A] rounded-xl text-white font-semibold text- active:scale- active:bg-[#D95A24] transition mt-8">
+Explore Events
+</button>
+ </a>
+
+</section>
+
+</div>
+
+    <!-- Bottom Navigation -->
+   <nav class="bg-red-50 bottom-0 left-0 right-0 bg-white border-t border-gray-100 z-50">
+<div class="max-w-[390px] mx-auto px-[8px] pt-[6px]">
+	<div class="flex items-center justify-around h-[60px]">
+
+		<a href="eventdiscovery.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+			<img src="majesticons_home.png" class="w-[24px] h-[24px] text-gray-400">
+			<span class="text-[10px] font-medium text-gray-400">Discover</span>
+		</a>
+
+		<a href="favourites.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+			<img src="material-symbols_book-outline.png" class="w-[24px] h-[24px] text-gray-400">
+			<span class="text-[10px] font-medium text-gray-400">Favourites</span>
+		</a>
+
+		<!-- Active -->
+		<a href="ticketview.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+			<div class="w-[48px] h-[48px] bg-[#E8622A] rounded-full flex items-center justify-center -mt-[16px] shadow-[0_4px_16px_rgba(232,98,42,0.35)]">
+				<img src="ep_ticket (1).png" class="w-[24px] h-[24px]">
+			</div>
+		</a>
+
+		<a href="attendeealert.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+			<img src="material-symbols_book-outline (2).png" class="w-[24px] h-[24px]">
+			<span class="text-[10px] font-medium text-gray-400">Alerts</span>
+		</a>
+
+		<a href="profile.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+			<img src="gg_profile.png" class="w-[24px] h-[24px]">
+			<span class="text-[10px] font-medium text-gray-400">Profile</span>
+		</a>
+	</div>
+</div>
+</nav>
+</body>
+</html>

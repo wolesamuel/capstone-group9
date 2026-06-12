@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camera Denied - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>.bg-brand { background-color: #E8622A; }.border-brand { border-color: #E8622A; }.text-brand { color: #E8622A; }</style>
+</head>
+<body class="bg-white">
+<main class="w-full max-w-[390px] mx-auto min-h-screen px-6 pt-3 pb-8 flex-col">
+
+  <!-- Back -->
+  <a href="camera-permission.html" class="mb-16">
+    <img src="material-symbols_arrow-back.png" alt="">
+  </a>
+
+  <!-- Content - Center -->
+  <div class="flex-1 flex flex-col items-center justify-center text-center">
+
+    <!-- Camera denied icon -->
+    <div class="w-24 h-24 bg-gray-200 mt-10 rounded-full flex items-center justify-center mb-6">
+      <img src="Frame 437.png" alt="">
+    </div>
+
+    <h1 class="text-2xl font-bold text-black mb-3">Camera Access Denied</h1>
+    <p class="text-base leading-6 max-w-[280px] mb-16">
+      Please allow camera access to scan and verify tickets securely.
+    </p>
+  </div>
+
+  <!-- Buttons - Bottom -->
+  <div class="space-y-3 mt-auto">
+    <button onclick="openSettings()"
+      class="w-full bg-brand hover:opacity-90 text-white font-semibold py-2 rounded-xl text-base">
+      Open Settings
+    </button>
+
+    <button onclick="tryAgain()"
+      class="w-full border-2 border-brand text-brand font-semibold py-2 rounded-xl text-base">
+      Try again
+    </button>
+  </div>
+</main>
+
+<script>
+function openSettings() {
+  alert('1. Tap the lock icon 🔒 in browser address bar\n2. Click Site Settings\n3. Change Camera to "Allow"\n4. Come back and tap Try Again');
+}
+
+function tryAgain() {
+  // Try camera again
+  navigator.mediaDevices.getUserMedia({ video: true })
+ .then(() => window.location.href = 'scanner.html')
+ .catch(() => alert('Still blocked. Use Open Settings button above'));
+}
+</script>
+</body>
+</html>
