@@ -50,7 +50,7 @@
         <a href="forgotpassword.html?role=staff" class="text-blue-600 font-medium">Forgot Password?</a>
       </div>
 
-      <!-- Changed to submit + added id -->
+      
       <button type="submit" class="w-full bg-[#E8622A] text-white font-semibold py-4 rounded-xl">
         Log in
       </button>
@@ -59,12 +59,31 @@
     <div class="mt-8 text-center">
       <p class="text-xs text-gray-400 leading-relaxed">
         By creating an account you agree to ScanPass' 
-        <p class="text-[#E8622A]">Terms of Service</p> and 
-        <p class="text-[#E8622A]">Privacy Policy</p>
+        <a href="#" class="text-[#E8622A]">Terms of Service</a> and 
+        <a href="#" class="text-[#E8622A]">Privacy Policy</a>
       </p>
     </div>
   </div>
 
- 
+  <script>
+  // Toggle password show/hide
+  document.getElementById('togglePassword').onclick = () => {
+    const pass = document.getElementById('password');
+    pass.type = pass.type === 'password' ? 'text' : 'password';
+  }
+
+  document.getElementById('staffLoginForm').onsubmit = (e) => {
+    e.preventDefault();
+    
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    
+
+    localStorage.setItem('staffEmail', email);
+    localStorage.setItem('userRole', 'staff');
+    
+    window.location.href = 'attendeeonboarding.html?role=staff';
+  }
+  </script>
 </body>
 </html>
