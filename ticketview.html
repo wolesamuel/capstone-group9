@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>My Tickets - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: '#E8622A'
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-gray-50 antialiased">
+<main class="w-full max-w-[390px] mx-auto min-h-screen pt-3 px-5 pb-8">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between mb-6">
+    <div class="flex items-center gap-2">
+      <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+      </svg>
+      <a href="eventdiscovery.html">
+        <span class="text-base font-medium text-black">Back</span>
+      </a>
+      
+    </div>
+    <button class="flex items-center justify-center">
+      <img src="Frame 334.png">
+    </button>
+  </header>
+
+  <!-- Tabs -->
+  <div class="grid grid-cols-2 gap-3 mb-5">
+    <button class="py-2.5 rounded-lg bg-white border-gray-200 text-brand font-medium text-sm shadow-sm">
+      Upcoming
+    </button>
+    <button class="py-2.5 rounded-lg bg-transparent text-gray-500 font-medium text-sm">
+      Past
+    </button>
+  </div>
+
+  <!-- Ticket Cards -->
+  <div class="space-y-4">
+
+    <!-- Card 1 -->
+    <div class="bg-white rounded-2xl p-4 shadow-sm border-gray-100">
+      <div class="flex gap-3 mb-3">
+        <img src="Frame 93.png" class="w-20 h-20 rounded-xl object-cover">
+        <div class="flex-1">
+          <span class="inline-block px-2.5 py-0.5 bg-brand/10 text-brand text-xs font-medium rounded-full mb-2">Upcoming</span>
+          <h3 class="text-lg font-bold text-black leading-tight">Africa AI<br>Summit 2026</h3>
+          <div class="flex items-center gap-1.5 text-sm text-gray-600 mt-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            <span>June 12, 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="h-px border-t border-dashed border-gray-300 my-3"></div>
+
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-xs text-gray-500 mb-0.5">Seat / Zone</p>
+          <p class="font-semibold text-black">Gold Section B12</p>
+        </div>
+        <a href="ticketview2.html" class="bg-brand hover:bg-[#D4551F] text-white font-semibold px-6 py-3 rounded-xl text-sm">
+        View QR
+      </a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-2xl p-4 shadow-sm border-gray-100">
+      <div class="flex gap-3 mb-3">
+        <img src="Frame 93.png" class="w-20 h-20 rounded-xl object-cover">
+        <div class="flex-1">
+          <span class="inline-block px-2.5 py-0.5 bg-brand/10 text-brand text-xs font-medium rounded-full mb-2">Upcoming</span>
+          <h3 class="text-lg font-bold text-black leading-tight">Round Table<br>Meeting</h3>
+          <div class="flex items-center gap-1.5 text-sm text-gray-600 mt-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            <span>June 18, 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="h-px border-t border-dashed border-gray-300 my-3"></div>
+
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-xs text-gray-500 mb-0.5">Order #</p>
+          <p class="font-semibold text-black">AI-20948-X</p>
+        </div>
+        <a href="ticketview2.html" class="bg-brand hover:bg-[#D4551F] text-white font-semibold px-6 py-3 rounded-xl text-sm">
+          View QR
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Save Button -->
+  <button class="w-full bg-gray-200 text-gray-400 font-semibold py-4 rounded-xl text-base mt-6">
+    Save To Device
+  </button>
+</main>
+</body>
+</html>

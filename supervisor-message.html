@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>Supervisor Message - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white antialiased">
+<div class="w-full max-w-[390px] mx-auto min-h-screen flex-col pb-20">
+
+<!-- Header -->
+<header class="pt-11 px-5 h-14 flex items-center relative mb-8">
+	<a href="alert.html" class="absolute left-5 w-8 h-8 flex items-center justify-center -ml-2 active:bg-gray-100 rounded-full transition" aria-label="Back">
+		<img src="material-symbols_arrow-back.png" class="w-6 h-6">
+	</a>
+	<h1 class="text-lg font-semibold text-black mx-auto">Supervisor Message</h1>
+</header>
+
+<!-- Content -->
+<div class="flex-1 px-5">
+
+	<!-- Chat Icon -->
+	<div class="flex justify-center mb-6">
+		<div class="w-16 h-16 flex items-center justify-center">
+			<img src="Group 11.png" class="w-16 h-16">
+		</div>
+	</div>
+
+	<!-- Message Card -->
+	<div class="bg-orange-50 rounded-lg p-4 mb-5">
+		<p class="font-semibold mb-1">Check Gate 1 wristband verification.</p>
+		<p>Please ensure all attendees are verified.</p>
+	</div>
+
+	<!-- Details Card -->
+	<div class="border border-orange-200 rounded-xl p-5 space-y-3 mb-8">
+		<div class="flex justify-between items-center">
+			<span class="text-gray-600 text-base">Sent By</span>
+			<span class="text-black font-semibold text-base">Admin Supervisor</span>
+		</div>
+		<div class="flex justify-between items-center">
+			<span class="text-gray-600 text-base">Time</span>
+			<span class="text-black font-semibold text-base">7:38 PM</span>
+		</div>
+		<div class="flex justify-between items-center">
+			<span class="text-gray-600 text-base">Priority</span>
+			<span class="text-orange-200 font-semibold">medium</span>
+		</div>
+	</div>
+
+	<!-- Acknowledge Button -->
+	<button id="ackBtn" class="w-full bg-[#E8622A] text-white font-semibold text-base py-3 rounded-xl flex items-center justify-center gap-2 active:bg-[#d55a26] transition">
+		<img src="fluent-mdl2_check-mark.png" class="w-9 h-9">
+		<span id="ackText">Acknowlege</span>
+	</button>
+</div>
+
+<!-- Bottom Nav -->
+<nav class="fixed bg-orange-50 shadow-3xl bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[390px] bg-white border-t border-gray-200 px-6 py-2">
+  <div class="flex justify-between items-center">
+    <a href="check-in-history.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="material-symbols_book-outline (6).png" class="w-6 h-6">
+      <span class="text-xs">History</span>
+    </a>
+    <a href="alerts.html" class="flex-col items-center gap-1 text-[#E8622A]">
+   <img src="material-symbols_book-outline (7).png" class="w-6 h-6">
+      <span class="text-xs font-medium">Alerts</span>
+    </a>
+    <a href="scanner.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="Home (1).png" class="w-10 h-10">
+    </a>
+    <a href="help.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="material-symbols_book-outline (3).png" class="w-6 h-6">
+      <span class="text-xs">Help</span>
+    </a>
+    <a href="staff-profile.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="material-symbols_book-outline (5).png" class="w-6 h-6">
+      <span class="text-xs">Profile</span>
+    </a>
+  </div>
+</nav>
+
+</div>
+
+<script>
+// Acknowledge button action
+document.getElementById('ackBtn').addEventListener('click', function() {
+	const btn = this;
+	const text = document.getElementById('ackText');
+
+	btn.disabled = true;
+	text.textContent = 'Acknowledged';
+	btn.classList.remove('bg-[#E8622A]', 'active:bg-[#d55a26]');
+	btn.classList.add('bg-green-600');
+
+	// Go back after 1s
+	setTimeout(() => {
+		history.back();
+	}, 1000);
+});
+</script>
+</body>
+</html>

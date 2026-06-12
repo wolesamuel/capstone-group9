@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Sync Scan - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: '#E8622A'
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-white antialiased">
+<main class="w-full max-w-[390px] mx-auto min-h-screen pt-3 px-6 pb-8 flex-col">
+
+  <!-- Back -->
+  <header class="mb-20">
+    <a href="scanner.html" class="inline-flex" aria-label="Go back">
+      <img src="material-symbols_arrow-back.png" alt="">
+    </a>
+  </header>
+
+  <!-- Content - Center -->
+  <section class="flex flex-1 flex-col items-center justify-center text-center">
+
+    <!-- Cloud Sync Icon -->
+    <div class="w-32 h-32 bg-gray-100 rounded-full flex items-center justify-center mb-8">
+      <div class="w-28 h-28 bg-gray-400 rounded-full flex items-center justify-center">
+        <img src="syncoutline.png">
+      </div>
+    </div>
+
+    <!-- Title -->
+    <h1 class="text-2xl font-bold text-black mb-3">
+      Sync Scan
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="leading-6 max-w-[260px] mb-16">
+      Your offline check-ins are being uploaded securely.
+    </p>
+  </section>
+
+  <!-- Actions - Bottom -->
+  <section class="space-y-2 mt-auto">
+    <!-- Sync Button -->
+    <button onclick="startSync()"
+      class="block w-full bg-brand hover:bg-[#D4551F] active:bg-[#C24D1C] text-white font-semibold py-4 rounded-xl text-base text-center transition-colors"
+    >
+      Sync
+    </button>
+
+    <!-- View Records -->
+    <a href="offline-records.html"
+      class="block w-full border-2 border-brand text-brand hover:bg-brand/5 font-semibold py-4 rounded-xl text-base text-center transition-colors"
+    >
+      View Offline Records
+    </a>
+  </section>
+</main>
+
+<script>
+function startSync() {
+  // Fake sync animation for demo
+  const btn = event.target;
+  btn.textContent = 'Syncing...';
+  btn.disabled = true;
+  btn.classList.add('opacity-70');
+
+  setTimeout(() => {
+    btn.textContent = 'Sync Complete';
+    btn.classList.remove('bg-brand', 'hover:bg-[#D4551F]');
+    btn.classList.add('bg-green-500');
+    setTimeout(() => window.location.href = 'offline-records.html', 1000);
+  }, 2000);
+}
+</script>
+</body>
+</html>

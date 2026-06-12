@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>My Ticket - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+<div class="w-full max-w-[390px] mx-auto min-h-screen flex-col pb-[84px]">
+
+<!-- Header -->
+<header class="pt-[44px] px-[20px] h-[56px] flex items-center justify-between">
+	<a href="eventdiscovery.html" class="w-[24px] h-[24px] flex items-center justify-center" aria-label="Back">
+		<img src="material-symbols_arrow-back.png" class="w-[24px] h-[24px]">
+	</a>
+	<h1 class="text-[17px] font-bold text-black tracking-[-0.4px]">My Ticket</h1>
+	<button class="w-[24px] h-[24px] flex items-center justify-center" aria-label="Help">
+		<img src="Frame 628.png" class="w-[24px] h-[24px] text-black">
+	</button>
+</header>
+
+<!-- Ticket Card -->
+<section class="px-[20px] mt-[12px]">
+	<div class="bg-white rounded-[16px] p-[16px] shadow-[0_1px_3px_rgba(0,0,0,0.08)] border-gray-100">
+
+		<!-- Top Row -->
+		<div class="flex gap-[12px] mb-[16px]">
+			<img src="Frame 93.png" alt="Africa AI Summit" class="w-20 h-20 rounded-md object-cover">
+			<div class="flex-1 min-w-0">
+				<div class="flex items-start justify-between mb-[4px]">
+					<span class="px-[8px] py-[2px] bg-[#FFF4F0] text-[#E8622A] text-[11px] font-medium rounded-full leading-[16px]">
+						Upcoming
+					</span>
+					<div class="text-right">
+						<p class="text-[11px] text-gray-400 leading-[14px]">Ticket ID</p>
+						<p class="text-[12px] font-medium leading-[16px]">#TKT-345D-4534</p>
+					</div>
+				</div>
+				<h2 class="text-[16px] font-bold text-black leading-[20px] mb-[3px] tracking-[-0.3px]">Africa AI Summit 2026</h2>
+				<div class="flex items-center gap-[4px] text-[13px] text-gray-500">
+					<svg class="w-[14px] h-[14px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+					</svg>
+					<span>June 12, 2026</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Dashed Divider -->
+		<div class="border-t border border-dashed border-gray-200 my-[12px]"></div>
+
+		<!-- Bottom Row -->
+		<div class="flex items-center justify-between">
+			<div>
+				<p class="text-[11px] text-gray-400 leading-[14px] mb-[2px]">Seat / Zone</p>
+				<p class="text-[14px] font-semibold text-black leading-[18px]">Gold Section B12</p>
+			</div>
+			<span class="px-[12px] py-[6px] bg-[#FFF4F0] text-[#E8622A] text-[12px] font-bold rounded-[8px] leading-[16px]">
+				VIP Access
+			</span>
+		</div>
+	</div>
+</section>
+
+<!-- QR Code -->
+<section class="px-[20px] mt-[32px] flex justify-center">
+	<div class="relative w-[288px] h-[288px] rounded-[20px] p-[20px]">
+		<!-- QR Code -->
+		<img
+			src="Gemini_Generated_Image_gx29lxgx29lxgx29 1.png"
+			class="w-full h-full"
+		>
+		<!-- Logo Center -->
+		<div class="absolute inset-0 flex items-center justify-center">
+			<div class="w-[72px] h-[72px] bg-white rounded-[16px] flex items-center justify-center p-[12px]">
+				<!-- Replace this with your actual ScanPass logo PNG/SVG -->
+				<img src="Logo.png" class="object-cover w-40 h-40 text-[#E8622A]">
+			</div>
+		</div>
+	</div>
+</section>
+
+<button onclick="window.location.href='screenshot-detected.html'" class="text-xs text-gray-400 underline mt-6">
+  Simulate Screenshot
+</button>
+
+</div>
+
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-100 z-50">
+<div class="max-w-[390px] mx-auto px-[8px] pt-[6px] pb-[calc(6px+env(safe-area-inset-bottom))]">
+	<div class="flex items-center justify-around h-[60px]">
+
+		<a href="eventdiscovery.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+			<img src="majesticons_home.png" class="w-[24px] h-[24px] text-gray-400">
+			<span class="text-[10px] font-medium text-gray-400">Discover</span>
+		</a>
+
+		<a href="favourites.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+			<img src="material-symbols_book-outline.png" class="w-[24px] h-[24px] text-gray-400">
+			<span class="text-[10px] font-medium text-gray-400">Favourites</span>
+		</a>
+
+		<!-- Active -->
+		<a href="ticketview.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+			<div class="w-[48px] h-[48px] bg-[#E8622A] rounded-full flex items-center justify-center -mt-[16px] shadow-[0_4px_16px_rgba(232,98,42,0.35)]">
+				<img src="ep_ticket (1).png" class="w-[24px] h-[24px]">
+			</div>
+		</a>
+
+		<a href="attendeealert.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+			<img src="material-symbols_book-outline (2).png" class="w-[24px] h-[24px]">
+			<span class="text-[10px] font-medium text-gray-400">Alerts</span>
+		</a>
+
+		<a href="profile.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+			<img src="gg_profile.png" class="w-[24px] h-[24px]">
+			<span class="text-[10px] font-medium text-gray-400">Profile</span>
+		</a>
+	</div>
+</div>
+</nav>
+</body>
+</html>

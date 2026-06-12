@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>Profile - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white antialiased">
+<div class="w-full max-w-[390px] mx-auto min-h-screen flex-col pb-20">
+
+<!-- Header -->
+<header class="pt-11 px-5 h-14 flex items-center relative mb-4">
+	<button onclick="history.back()" class="absolute left-5 w-8 h-8 flex items-center justify-center -ml-2 active:bg-gray-100 rounded-full transition" aria-label="Back">
+		<img src="material-symbols_arrow-back.png" class="w-6 h-6">
+	</button>
+	<h1 class="text-lg font-bold mx-auto">Profile</h1>
+</header>
+
+
+<!-- Profile Banner + Avatar -->
+<section class="px-5 mt-8">
+	<!-- Orange Banner with Proper Arc -->
+	<div class="relative">
+		<img src="Subtract.png">
+	</div>
+
+	<!-- Avatar overlaps banner -->
+	<div class="flex flex-col items-center -mt-12">
+		<div class="relative">
+			<img src="Mask group (3).png" class="ml-3 mt-2 w-23 h-23 object-cover">
+			<!-- Edit Icon -->
+			<button class="absolute bottom-1 right-1 w-7 h-7 flex items-center justify-center active:scale-95 transition">
+				<img src="line-md_edit-filled.png" class="w-7 h-7">
+			</button>
+		</div>
+		<h2 class="text-xl font-semibold text-black mt-4">Asher Ejiro</h2>
+			<div class="flex items-center justify-center gap-1 text-gray-600 text-sm pb-4">
+		<img src="icon-park-solid_inclusive-gateway.png" class="w-5 h-5">
+		<span>Gate 1 Scanner - African AI Summit</span>
+	</div>
+	</div>
+</section>
+
+<!-- Menu List -->
+<section class="px-5 mt-8 -mb-4 space-y-6">
+
+	<!-- Account -->
+	<div>
+		<h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2.5 px-1">Account</h3>
+		<div>
+			<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+				<div class="flex items-center gap-3.5">
+					<img src="majesticons_home (2).png" class="w-5 h-5">
+					<span class="text-[15px] font-medium text-black">Manage Profile</span>
+				</div>
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+				</svg>
+			</a>
+			<div class="border-t border-gray-200"></div>
+			<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+				<div class="flex items-center gap-3.5">
+					<img src="majesticons_home (3).png" class="w-5 h-5">
+					<span class="text-[15px] font-medium text-black">Password & Security</span>
+				</div>
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+				</svg>
+			</a>
+			<div class="border-t border-gray-200"></div>
+			<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+				<div class="flex items-center gap-3.5">
+					<img src="majesticons_home (4).png" class="w-5 h-5">
+					<span class="text-[15px] font-medium text-black">Notifications</span>
+				</div>
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+				</svg>
+			</a>
+			<div class="border-t border-gray-200"></div>
+			<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+				<div class="flex items-center gap-3.5">
+					<img src="majesticons_home (5).png" class="w-5 h-5">
+					<span class="text-[15px] font-medium text-black">Language</span>
+				</div>
+				<div class="flex items-center gap-1.5">
+					<span class="text-sm text-gray-400">English</span>
+					<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+					</svg>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<!-- Scanner Settings -->
+	<div>
+		<h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2.5 px-1">Scanner Settings</h3>
+		<div>
+			<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+				<div class="flex items-center gap-3.5">
+					<img src="mdi_line-scan.png" class="w-5 h-5">
+					<span class="text-[15px] font-medium text-black">Auto-Scan Mode</span>
+				</div>
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+				</svg>
+			</a>
+			<div class="border-t"></div>
+			<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+				<div class="flex items-center gap-3.5">
+					<img src="tdesign_sound-filled.png" class="w-5 h-5">
+					<span class="text-[15px] font-medium text-black">Sound Feedback</span>
+				</div>
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+				</svg>
+			</a>
+			<div class="border-t">
+			<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+				<div class="flex items-center gap-3.5">
+					<img src="mdi_vibrate.png" class="w-5 h-5">
+					<span class="text-[15px] font-medium text-black">Vibration Feedback</span>
+				</div>
+				<div class="flex items-center gap-1.5">
+					<span class="text-sm text-gray-400">On</span>
+					<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+					</svg>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<!-- Support & Help -->
+	<div>
+		<h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2.5 px-1">Support & Help</h3>
+		<div class="rounded-2xloverflow-hidden">
+			<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+				<div class="flex items-center gap-3.5">
+					<img src="material-symbols_book-outline (3).png" class="w-5 h-5">
+					<span class="text-[15px] font-medium text-black">Search FAQs</span>
+				</div>
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+				</svg>
+			</a>
+			<div class="border-t border-gray-200"></div>
+			<a href="contact-support.html" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+				<div class="flex items-center gap-3.5">
+					<img src="majesticons_home (8).png" class="w-5 h-5">
+					<span class="text-[15px] font-medium text-black">Contact Us</span>
+				</div>
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+				</svg>
+			</a>
+			<div class="border-t border-gray-200"></div>
+			<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+				<div class="flex items-center gap-3.5">
+					<img src="ic_round-privacy-tip.png" class="w-5 h-5">
+					<span class="text-[15px] font-medium text-black">Privacy Policy</span>
+				</div>
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+				</svg>
+			</a>
+			<div class="border-t border-gray-200"></div>
+			<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+				<div class="flex items-center gap-3.5">
+					<img src="material-symbols_delete-outline-rounded.png" class="w-5 h-5">
+					<span class="text-[15px] font-medium text-gray-500">Delete Account</span>
+				</div>
+				<svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+				</svg>
+			</a>
+			<div class="border-t border-gray-200"></div>
+			<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+				<div class="flex items-center gap-3.5">
+					<img src="iconamoon_exit-light.png" class="w-5 h-5">
+					<span class="text-[15px] font-medium text-gray-500">Log out</span>
+				</div>
+				<svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+				</svg>
+			</a>
+		</div>
+	</div>
+</section>
+
+<!-- Bottom Nav -->
+<nav class="fixed bg-orange-50 shadow-3xl bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[390px] bg-white border-t border-gray-200 px-6 py-2">
+  <div class="flex justify-between items-center">
+    <a href="check-in-history.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="material-symbols_book-outline (6).png" class="w-6 h-6">
+      <span class="text-xs">History</span>
+    </a>
+    <a href="alerts.html" class="flex-col items-center gap-1 text-gray-400">
+   <img src="material-symbols_book-outline (2).png" class="w-6 h-6">
+      <span class="text-xs font-xs">Alerts</span>
+    </a>
+    <a href="scanner.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="Home (1).png" class="w-10 h-10">
+    </a>
+    <a href="help.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="material-symbols_book-outline (3).png" class="w-6 h-6">
+      <span class="text-xs">Help</span>
+    </a>
+    <a href="staff-profile.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="material-symbols_book-outline (5).png" class="w-6 h-6">
+      <span class="text-xs">Profile</span>
+    </a>
+  </div>
+</nav>
+</div>
+
+<script>
+// Logout action
+document.getElementById('logoutBtn').addEventListener('click', function() {
+	if(confirm('Are you sure you want to log out?')) {
+		window.location.href = 'login.html';
+	}
+});
+
+// Add orange filter for active profile icon
+const style = document.createElement('style');
+style.innerHTML = `.filter-orange { filter: invert(52%) sepia(93%) saturate(1500%) hue-rotate(343deg) brightness(98%) contrast(94%); }`;
+document.head.appendChild(style);
+</script>
+</body>
+</html>

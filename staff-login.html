@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>Staff Login - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="w-full max-w-[390px] mx-auto min-h-screen px-5 pt-11 pb-8 flex-col">
+
+<!-- Header -->
+<header class="mb-8">
+	<h1 class="text- text-black font-bold text-center">Staff Login</h1>
+</header>
+
+<!-- Content -->
+<div class="flex-1">
+	<h2 class="text-2xl font-bold text-black mb-2">Welcome!</h2>
+	<p class="text- text-gray-600 mb-6 leading-relaxed">
+		Log in with your invite link or credentials to access staff tools.
+	</p>
+
+	<!-- Form -->
+	<form action="staff-dashboard.html" method="POST" class="space-y-5">
+
+		<!-- Email Address -->
+		<div>
+			<label for="email" class="block text- font-medium text-black mb-2">Email Address</label>
+			<div class="relative border rounded-xl border-gray-300">
+				<img src="material-symbols_mail-outline.png" class="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5">
+				<input
+					type="email"
+					id="email"
+					name="email"
+					required
+					class="w-full h-12 pl-11 pr-4 border-gray-300 rounded-xl text- text-black placeholder-gray-400 focus:outline-none focus:border-[#E8622A] focus:ring-1 focus:ring-[#E8622A] transition"
+					placeholder="name@gmail.com"
+				>
+			</div>
+		</div>
+
+		<!-- Password -->
+		<div>
+			<label for="password" class="block text- font-medium text-black mb-2">Password</label>
+			<div class="relative border rounded-xl border-gray-300">
+				<img src="Lock Comp.png" class="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5">
+				<input
+					type="password"
+					id="password"
+					name="password"
+					required
+					minlength="8"
+					class="w-full h-12 pl-11 pr-11 border-gray-300 rounded-xl text- text-black placeholder-gray-400 focus:outline-none focus:border-[#E8622A] focus:ring-1 focus:ring-[#E8622A] transition"
+					placeholder="Min. 8 characters"
+				>
+				<!-- Static eye icon, no toggle -->
+				<div class="absolute right-3.5 top-1/2 -translate-y-1/2 w-5 h-5 flex items-center justify-center pointer-events-none">
+					<img src="Vector (8).png" class="w-5 h-4">
+				</div>
+			</div>
+		</div>
+
+		<!-- Remember + Forgot -->
+		<div class="flex items-center justify-between">
+			<label class="flex items-center gap-2 cursor-pointer">
+				<input type="checkbox" id="remember" name="remember" class="w-4 h-4 rounded border-gray-300 shadow-2xl text-[#E8622A] focus:ring-[#E8622A] focus:ring-2">
+				<span class="text-sm">Remember Me</span>
+			</label>
+			<a href="forgot-password.html" class="text-sm font-medium text-blue-800">Forgot Password?</a>
+		</div>
+
+		<!-- Log in Button -->
+		<button
+			type="submit"
+			class="w-full h-12 bg-[#E8622A] rounded-xl text-white font-semibold text- active:scale- active:bg-[#D95A24] transition"
+		>
+			Log in
+		</button>
+	</form>
+
+	<!-- Divider -->
+	<div class="flex items-center gap-3 my-6">
+		<div class="flex-1 h-px bg-orange-300"></div>
+		<span class="text-sm">or continue with</span>
+		<div class="flex-1 h-px bg-orange-300"></div>
+	</div>
+
+	<!-- Invite Link Button -->
+	<a
+		href="invite-link.html"
+		class="w-full h-12 bg-white border-2 border-[#E8622A] rounded-xl flex items-center justify-center gap-2 text-[#E8622A] font-semibold text- active:bg-orange-50 transition"
+	>
+		<img src="ic_baseline-link.png" class="w-5 h-5">
+		Invite Link
+	</a>
+</div>
+
+<!-- Footer Terms -->
+<p class="text-xs text-center text-gray-400 w-[300px] mt-6 leading-relaxed">
+	By creating an account you agree to ScanPass's
+	<a href="terms.html" class="text-[#E8622A] font-medium">Terms of Service</a> and
+	<a href="privacy.html" class="text-[#E8622A] font-medium">Privacy Policy</a>
+</p>
+
+</div>
+</body>
+</html>

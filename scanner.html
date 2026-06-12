@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Scan QR - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: { colors: { brand: '#E8622A' }
+  }
+</script>
+</head>
+<body class="bg-black antialiased">
+<main class="w-full max-w-[390px] mx-auto min-h-screen flex-col">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 pt-3 pb-6">
+    <a href="home.html" class="text-white">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+      </svg>
+    </a>
+    <h1 class="text-lg font-bold text-white">Scan QR</h1>
+    <div class="flex gap-4">
+      <button id="flashBtn" class="text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+      </button>
+      <button id="flipBtn" class="text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Scanner Area -->
+  <div class="flex-1 flex-col items-center justify-center px-6">
+    <div class="relative w-64 h-64 mx-auto">
+      <!-- Camera feed goes here -->
+      <div id="reader" class="w-full h-full"></div>
+      
+      <!-- Orange frame overlay -->
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-brand rounded-tl-lg"></div>
+        <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-brand rounded-tr-lg"></div>
+        <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-brand rounded-bl-lg"></div>
+        <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-brand rounded-br-lg"></div>
+        <div class="absolute top-1/2 left-0 right-0 h-0.5 bg-brand/50 animate-pulse"></div>
+      </div>
+    </div>
+
+    <!-- Text -->
+    <div class="text-center mt-12">
+      <p class="text-white font-medium mb-1">Waiting for Scan...</p>
+      <p class="text-gray-400 text-sm">Scan a ticket QR code to continue.</p>
+    </div>
+  </div>
+
+<!-- Bottom Navigation -->
+<nav class="bottom-0 left-0 right-0 border bg-orange-50 border-orange-300 shadow-lg z-50 mt-16">
+<div class="max-w-[390px] mx-auto px-[8px] pt-[6px]">
+<div class="flex items-center justify-around h-[60px]">
+
+<a href="eventdiscovery.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+	<img src="majesticons_home.png" class="w-[24px] h-[24px] text-gray-400">
+	<span class="text-[10px] font-medium text-gray-400">Discover</span>
+</a>
+
+<a href="favourites.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+	<img src="material-symbols_book-outline.png" class="w-[24px] h-[24px] text-gray-400">
+	<span class="text-[10px] font-medium text-gray-400">Favourites</span>
+</a>
+
+<!-- Active -->
+<a href="ticketview.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+	<div class="w-[40px] h-[40px] bg-[#E8622A] rounded-full flex items-center justify-center -mt-[14px] shadow">
+		<img src="ep_ticket (1).png" class="w-[24px] h-[24px]">
+	</div>
+</a>
+
+<a href="attendeealert.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+	<img src="material-symbols_book-outline (2).png" class="w-[24px] h-[24px]">
+	<span class="text-[10px] font-medium text-gray-400">Alerts</span>
+</a>
+
+<a href="profile.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+	<img src="gg_profile.png" class="w-[24px] h-[24px]">
+	<span class="text-[10px] font-medium text-gray-400">Profile</span>
+</a>
+</div>
+  </nav>
+
+  <!-- Verifying Modal -->
+<div id="verifyingModal" class="hidden fixed inset-0 bg-black/70 z-50 flex items-end">
+  <div class="bg-white w-full max-w-[390px] mx-auto rounded-t-3xl px-6 pt-8 pb-10">
+
+    <!-- Loading spinner -->
+    <div class="flex justify-center mb-6">
+      <div class="w-12 h-12 border-4 border-gray-200 border-t-brand rounded-full animate-spin"></div>
+    </div>
+
+    <!-- Text -->
+    <div class="text-center mb-8">
+      <h2 class="text-xl font-bold text-black mb-2">Verifying Ticket...</h2>
+      <p class="text-gray-600 text-sm leading-6 max-w-[260px] mx-auto">
+        Please hold the QR code steady while we validate the attendee ticket.
+      </p>
+    </div>
+
+    <!-- Buttons -->
+    <button id="cancelBtn"
+      class="w-full bg-brand hover:opacity-90 text-white font-semibold py-4 rounded-xl text-base mb-3">
+      Cancel
+    </button>
+
+    <button id="retryBtn"
+      class="w-full border-2 border-brand text-brand hover:bg-orange-50 font-semibold py-4 rounded-xl text-base">
+      Retry Scan
+    </button>
+  </div>
+</div>
+
+</main>
+
+<script>
+let html5QrCode;
+let isScanning = true;
+
+
+const modal = document.getElementById('verifyingModal');
+const cancelBtn = document.getElementById('cancelBtn');
+const retryBtn = document.getElementById('retryBtn');
+
+
+function onScanSuccess(decodedText) {
+  html5QrCode.stop();
+
+  modal.classList.remove('hidden');
+
+  
+  setTimeout(() => {
+ 
+    let isValid = decodedText.includes('VALID'); // test: use QR with "VALID" in it
+
+    modal.classList.add('hidden');
+
+    if(isValid) {
+      window.location.href = 'ticket-valid.html?ticket=' + decodedText;
+    } else {
+      window.location.href = 'ticket-invalid.html';
+    }
+  }, 3000);
+}
+
+cancelBtn.onclick = () => {
+  modal.classList.add('hidden');
+  startScanner();
+};
+
+retryBtn.onclick = () => {
+  modal.classList.add('hidden');
+  startScanner();
+};
+
+function onScanFailure(error) {
+}
+  
+
+  html5QrCode.stop();
+  
+
+  console.log("QR Data:", decodedText);
+  
+
+  verifyTicket(decodedText);
+}
+
+function verifyTicket(qrData) {
+  
+  fetch('/api/verify-ticket', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({qr_code: qrData})
+  })
+ .then(res => res.json())
+ .then(data => {
+    if(data.valid) {
+    
+      window.location.href = 'scan-success.html?name=' + data.name;
+    } else {
+      alert('Invalid ticket');
+      isScanning = true;
+      html5QrCode.start();
+    }
+  })
+ .catch(() => {
+    
+    saveOffline(qrData);
+    window.location.href = 'sync-scan.html';
+  });
+}
+
+function saveOffline(qrData) {
+  let offline = JSON.parse(localStorage.getItem('offlineScans') || '[]');
+  offline.push({qr: qrData, time: new Date().toISOString()});
+  localStorage.setItem('offlineScans', JSON.stringify(offline));
+}
+
+
+html5QrCode = new Html5Qrcode("reader");
+html5QrCode.start(
+  { facingMode: "environment" },
+  { fps: 10, qrbox: 250 },
+  onScanSuccess
+);
+</script>
+</body>
+</html>

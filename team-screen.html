@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+body { font-family: 'Inter', sans-serif; }
+</style>
+</head>
+<body>
+<div class="flex h-screen overflow-hidden">
+
+<!-- Sidebar -->
+<aside class="flex w-64 border-r border-gray-200 flex-col hidden md:flex shrink-0 h-screen">
+<div class="p-6">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 flex items-center justify-center">
+<img src="Frame 31.png">
+</div>
+<span class="text-xl font-bold">Scanpass</span>
+</div>
+</div>
+
+<nav class="flex-1 px-4 space-y-2">
+<a href="organizer-dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (13).png" class="w-4 h-4">
+Dashboard
+</a>
+<a href="event-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (1).png" class="w-4 h-4">
+Event
+</a>
+<a href="analytics-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (2).png" class="w-4 h-4">
+Analytics
+</a>
+<a href="team-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-orange-50 text-orange-600 border-l-4 border-orange-500 font-medium">
+<img src="staffpics (7).png" class="w-4 h-4">
+Team
+</a>
+<a href="profile-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (4).png" class="w-4 h-4">
+Profile
+</a>
+</nav>
+<div class="p-4 border-t border-orange-200 space-y-2">
+<a href="create-event.html">
+<button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2.5 rounded-lg flex items-center justify-center gap-2">
+<img src="Icon (5).png" class="w-4 h-4">
+Create Event
+</button>
+</a>
+<a href="settings-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Container (7).png">
+Settings
+</a>
+<a href="support-screen.html" class="flex items-center gap-3 pl-7 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Container (8).png">
+Support
+</a>
+</div>
+</aside>
+
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto">
+<div class="p-6 md:p-8 max-w-7xl mx-auto">
+
+<!-- Top Bar -->
+<div class="flex items-center justify-between mb-6">
+<h1 class="text-2xl font-bold text-orange-700">Team</h1>
+<div class="flex-1 max-w-md mx-6">
+<div class="relative border rounded-lg">
+<img src="Icon (6).png" class="absolute left-3 top-3 w-5 h-5">
+<input type="text" placeholder="Search events, staff..." 
+class="w-full pl-10 pr-4 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-orange-200">
+</div>
+</div>
+<div class="flex items-center gap-2">
+
+    <a href="notification.html">
+        <button class="p-2 hover:bg-gray-100 -mr-4">
+<img src="Button.png" class="w-9 h-9">
+</button>
+    </a>
+    <a href="support-screen.html">
+        <button class="p-2 hover:bg-gray-100">
+<img src="Button (1).png" class="w-9 h-9">
+</button>
+    </a>
+    <a href="profile-screen.html">
+        <div class="flex items-center gap-3 pl-4 border-l border-orange-200">
+    <div class="text-right">
+        <p class="text-sm font-semibold">Chisom Okoli</p>
+        <p class="text-xs text-gray-500">Event Manager</p>
+    </div>
+    <img src="Manager Avatar.png" class="w-10 h-10">
+</div>
+    </a>
+
+</div>
+</div>
+<!-- Header + Add Button -->
+<div class="flex items-center justify-between mb-6">
+    <div>
+    <p class="text-gray-600 mb-1">Manage your event crew</p>
+    <p class="text-base font-semibold text-gray-900">5 staff members</p>
+    </div>
+    <a href="add-staff.html" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2.5 rounded-lg flex items-center gap-2">
+    <img src="staffpics (6).png"> 
+    Add Staff
+    </a>
+</div>
+
+<!-- Table -->
+<div class="bg-white rounded-lg border-gray-200 overflow-hidden">
+    <table class="w-full">
+    <thead class="border border-black bg-gray-100">
+        <tr>
+        <th class="text-left px-6 py-4 text-sm font-semibold text-gray-900 uppercase">Staff Member</th>
+        <th class="text-left px-6 py-4 text-sm font-semibold text-gray-900 uppercase">Email</th>
+        <th class="text-center px-6 py-4 text-sm font-semibold text-gray-900 uppercase">Status</th>
+        <th class="text-center px-6 py-4 text-sm font-semibold text-gray-900 uppercase">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Row 1 -->
+        <tr class="hover:bg-gray-50 border border-black">
+        <td class="px-6">
+            <div class="flex items-center">
+            <img src="staffpics (5).png" class="w-10 h-10 rounded-full object-cover" alt="Marcus Dapo">
+            <span class="font-medium text-gray-900">Marcus Dapo</span>
+            </div>
+        </td>
+        <td class="px-6 py-4 text-gray-700">Marc.Daps@gmail.com</td>
+        <td class="px-6 py-4 text-center">
+            <span class="px-4 py-1.5 bg-green-100 text-green-700 text-sm font-semibold rounded-lg">ACTIVE</span>
+        </td>
+        <td class="px-6 py-4 text-center">
+            <button class="remove-btn text-red-500 hover:text-red-700">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+            </button>
+        </td>
+        </tr>
+
+        <!-- Row 2 -->
+        <tr class="hover:bg-gray-50 border border-black">
+        <td class="px-6 py-1">
+            <div class="flex items-center gap-3">
+            <img src="staffpics (4).png" class="w-10 h-10 rounded-full object-cover" alt="Sarah Ezechi">
+            <span class="font-medium text-gray-900">Sarah Ezechi</span>
+            </div>
+        </td>
+        <td class="px-6 py-4 text-gray-700">SaraEzecs@gmail.com</td>
+        <td class="px-6 py-4 text-center">
+            <span class="px-4 py-1.5 bg-green-100 text-green-700 text-sm font-semibold rounded-lg">ACTIVE</span>
+        </td>
+        <td class="px-6 py-4 text-center">
+            <button class="remove-btn text-red-500 hover:text-red-700">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+            </button>
+        </td>
+        </tr>
+
+        <!-- Row 3 -->
+        <tr class="hover:bg-gray-50 border border-black">
+        <td class="px-6 py-1">
+            <div class="flex items-center gap-3">
+            <img src="staffpics (3).png" class="w-10 h-10 rounded-full object-cover" alt="Bolu Hassan">
+            <span class="font-medium text-gray-900">Bolu Hassan</span>
+            </div>
+        </td>
+        <td class="px-6 py-4 text-gray-700">Bolassan@gmail.com</td>
+        <td class="px-6 py-4 text-center">
+            <span class="px-4 py-1.5 bg-red-100 text-red-700 text-sm font-semibold rounded-lg">INACTIVE</span>
+        </td>
+        <td class="px-6 py-4 text-center">
+            <button class="remove-btn text-red-500 hover:text-red-700">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+            </button>
+        </td>
+        </tr>
+
+        <!-- Row 4 -->
+        <tr class="hover:bg-gray-50 border border-black">
+        <td class="px-6 py-1">
+            <div class="flex items-center gap-3">
+            <img src="staffpics (2).png" class="w-10 h-10 rounded-full object-cover" alt="Tricia Ofure">
+            <span class="font-medium text-gray-900">Tricia Ofure</span>
+            </div>
+        </td>
+        <td class="px-6 py-4 text-gray-700">Ofutricia@gmail.com</td>
+        <td class="px-6 py-4 text-center">
+            <span class="px-4 py-1.5 bg-green-100 text-green-700 text-sm font-semibold rounded-lg">ACTIVE</span>
+        </td>
+        <td class="px-6 py-4 text-center">
+            <button class="remove-btn text-red-500 hover:text-red-700">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+            </button>
+        </td>
+        </tr>
+
+        <!-- Row 5 -->
+        <tr class="hover:bg-gray-50 border border-black">
+        <td class="px-6 py-1">
+            <div class="flex items-center gap-3">
+            <img src="staffpics (1).png" class="w-10 h-10 rounded-full object-cover" alt="Ali Ganiyu">
+            <span class="font-medium text-gray-900">Ali Ganiyu</span>
+            </div>
+        </td>
+        <td class="px-6 py-4 text-gray-700">Ganiyuli@gmail.com</td>
+        <td class="px-6 py-4 text-center">
+            <span class="px-4 py-1.5 bg-red-100 text-red-700 text-sm font-semibold rounded-lg">INACTIVE</span>
+        </td>
+        <td class="px-6 py-4 text-center">
+            <button class="remove-btn text-red-500 hover:text-red-700">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+            </button>
+        </td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+
+</div>
+</main>
+</div>
+
+
+<!-- delete button response -->
+<div id="deleteModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+  <div class="bg-white rounded-2xl p-8 max-w-md w-full">
+    <div class="text-center">
+      <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+        <img src="Visual Header.png" class="w-12 h-12">
+      </div>
+      <h3 class="text-xl font-bold mb-2">Delete Staff Member?</h3>
+      <p class="text-gray-600 mb-6 w-[300px] pl-10">
+        Are you sure you want to remove <span id="staffName" class="font-bold">Marcus Dapo</span> <strong>from your team? This action cannot be undone.</strong>
+      </p>
+      <button id="confirmDelete" class="w-full bg-orange-500 text-white py-2 rounded-lg mb-3">Delete</button>
+      <button id="cancelDelete" class="w-full border-gray-300 py-2 border rounded-lg">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  
+  document.querySelector('.remove-btn').onclick = () => {
+    document.getElementById('staffName').innerText = 'Marcus Dapo';
+    document.getElementById('deleteModal').classList.remove('hidden');
+  }
+
+  document.getElementById('cancelDelete').onclick = () => {
+    document.getElementById('deleteModal').classList.add('hidden');
+  }
+
+  document.getElementById('confirmDelete').onclick = () => {
+    alert('Staff deleted');
+    document.getElementById('deleteModal').classList.add('hidden');
+  }
+
+});
+</script>
+
+</body>
+</html> 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>Screenshot Detected - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: '#E8622A'
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-white antialiased">
+<main class="w-full max-w-[390px] mx-auto min-h-screen pt-12 px-6 pb-8 flex-col">
+
+  <!-- Header / Back -->
+  <header class="mb-16">
+    <a href="ticketview2.html" class="inline-flex" aria-label="Go back">
+      <img src="material-symbols_arrow-back.png" alt="">
+    </a>
+  </header>
+
+  <!-- Content - Centered -->
+  <section class="flex-1 flex-col items-center text-center justify-center">
+
+    <!-- Camera Icon -->
+    <div class=" flex items-center justify-center mb-8">
+      <div class="flex items-center justify-center">
+        <img src="Frame 458.png" alt="">
+      </div>
+    </div>
+
+    <!-- Title -->
+    <h1 class="text-2xl font-bold text-black mb-3">
+      Screenshot Detected
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="leading-6 mb-12 max-w-[280px]">
+      For security reasons, screenshot tickets are not allowed. Please present the original live ticket.
+    </p>
+  </section>
+
+  <!-- Actions - Bottom -->
+  <section class="space-y-3 mt-auto">
+    <a href="ticketview2.html"
+      class="block w-full bg-brand hover:bg-[#D4551F] active:bg-[#C24D1C] text-white font-semibold py-3 rounded-xl text-base text-center transition-colors"
+    >
+      Open Original Ticket
+    </a>
+
+    <a href="ticketview2.html"
+      class="block w-full border-2 border-brand text-brand hover:bg-brand/5 font-semibold py-3 rounded-xl text-base text-center transition-colors"
+    >
+      Verify Manually
+    </a>
+  </section>
+</main>
+</body>
+</html>

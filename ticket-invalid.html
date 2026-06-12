@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invalid Ticket - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+.bg-brand { background-color: #E8622A; }
+.border-brand { border-color: #E8622A; }
+.text-brand { color: #E8622A; }
+</style>
+</head>
+<body class="bg-black/50 backdrop-blur-sm">
+<main class="w-full min-h-screen flex items-center justify-center px-4">
+
+  <!-- Modal Card - wider + better spacing -->
+  <div class="bg-white w-full max-w-[360px] rounded-3xl px-7 pt-10 pb-8">
+
+    <!-- QR with slash icon -->
+    <div class="flex justify-center mb-7">
+      <div class="w-20 h-20 bg-red-50 rounded-full flex items-center justify-center">
+        <svg class="w-10 h-10 text-red-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <rect x="3" y="3" width="7" height="7" rx="1"/>
+          <rect x="14" y="3" width="7" height="7" rx="1"/>
+          <rect x="3" y="14" width="7" height="7" rx="1"/>
+          <rect x="14" y="14" width="5" height="5" rx="1"/>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 4l16 16"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Text - bigger + better line height -->
+    <div class="text-center mb-9">
+      <h1 class="text-[22px] font-bold text-black mb-3 leading-tight">Invalid Ticket</h1>
+      <p class="text-gray-600 text-[15px] leading-7">
+        This ticket could not be verified in the system. Please confirm the QR code or contact event support before granting access.
+      </p>
+    </div>
+
+    <!-- Buttons - taller + better spacing -->
+    <div class="space-y-3.5">
+      <button onclick="scanAgain()"
+        class="w-full bg-brand hover:opacity-90 text-white font-semibold py-[16px] rounded-xl text-[16px]">
+        Scan Another Ticket
+      </button>
+
+      <button onclick="verifyManual()"
+        class="w-full border-2 border-brand text-brand hover:bg-orange-50 font-semibold py-[16px] rounded-xl text-[16px]">
+        Verify Manually
+      </button>
+    </div>
+  </div>
+</main>
+
+<script>
+function scanAgain() {
+  window.location.href = 'scanner.html';
+}
+
+function verifyManual() {
+  let code = prompt('Enter ticket code manually:');
+  if(code && code.trim()) {
+    alert('Checking: ' + code);
+    // Later: call your verify API here
+  }
+}
+</script>
+</body>
+</html>

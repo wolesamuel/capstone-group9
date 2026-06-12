@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>Profile - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased">
+<div class="w-full max-w-[390px] mx-auto min-h-screen pb-24">
+
+<!-- Header -->
+<header class="pt-11 px-5 h-14 flex items-center justify-center relative">
+<a href="eventdiscovery.html" class="absolute left-5 w-8 h-8 flex items-center justify-center -ml-2 active:bg-gray-100 rounded-full transition" aria-label="Back">
+<img src="material-symbols_arrow-back.png" class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+</a>
+<h1 class="text-lg font-bold text-black tracking-tight">Profile</h1>
+</header>
+
+<!-- Profile Banner + Avatar -->
+<section class="px-5 mt-8">
+<!-- Orange Banner with Proper Arc -->
+<div class="relative">
+<img src="Subtract.png">
+</div>
+
+<!-- Avatar overlaps banner -->
+<div class="flex flex-col items-center -mt-12">
+<div class="relative">
+	<img src="Mask group (3).png" class="ml-3 mt-2 w-23 h-23 object-cover">
+	<!-- Edit Icon -->
+		<button class="absolute bottom-1 right-1 w-7 h-7 flex items-center justify-center active:scale-95 transition">
+		<img src="line-md_edit-filled.png" class="w-7 h-7">
+	</button>
+</div>
+<h2 class="text-xl font-bold text-black mt-4">Adewale Fisayo</h2>
+<div class="flex items-center gap-1 mt-1">
+	<svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+		<path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+	</svg>
+	<p class="text-sm text-gray-500">Ikeja, Lagos</p>
+</div>
+</div>
+</section>
+
+<!-- Menu List -->
+<section class="px-5 mt-8 -mb-20 space-y-6">
+
+<!-- Account -->
+<div>
+<h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2.5 px-1">Account</h3>
+<div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+	<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+		<div class="flex items-center gap-3.5">
+			<img src="majesticons_home (2).png" class="w-5 h-5">
+			<span class="text-[15px] font-medium text-black">Manage Profile</span>
+		</div>
+		<svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+		</svg>
+	</a>
+	<div class="border-t border-gray-100"></div>
+	<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+		<div class="flex items-center gap-3.5">
+			<img src="majesticons_home (3).png" class="w-5 h-5">
+			<span class="text-[15px] font-medium text-black">Password & Security</span>
+		</div>
+		<svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+		</svg>
+	</a>
+	<div class="border-t border-gray-100"></div>
+	<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+		<div class="flex items-center gap-3.5">
+			<img src="majesticons_home (4).png" class="w-5 h-5">
+			<span class="text-[15px] font-medium text-black">Notifications</span>
+		</div>
+		<svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+		</svg>
+	</a>
+	<div class="border-t border-gray-100"></div>
+	<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+		<div class="flex items-center gap-3.5">
+			<img src="majesticons_home (5).png" class="w-5 h-5">
+			<span class="text-[15px] font-medium text-black">Language</span>
+		</div>
+		<div class="flex items-center gap-1.5">
+			<span class="text-sm text-gray-400">English</span>
+			<svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+			</svg>
+		</div>
+	</a>
+</div>
+</div>
+
+<!-- Preferences -->
+<div>
+<h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2.5 px-1">Preferences</h3>
+<div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+	<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+		<div class="flex items-center gap-3.5">
+			<img src="majesticons_home (6).png" class="w-5 h-5">
+			<span class="text-[15px] font-medium text-black">Event Interests</span>
+		</div>
+		<svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+		</svg>
+	</a>
+	<div class="border-t border-gray-100"></div>
+	<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+		<div class="flex items-center gap-3.5">
+			<img src="majesticons_home (7).png" class="w-5 h-5">
+			<span class="text-[15px] font-medium text-black">Preferred Location</span>
+		</div>
+		<svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+		</svg>
+	</a>
+	<div class="border-t border-gray-100"></div>
+	<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+		<div class="flex items-center gap-3.5">
+			<img src="arcticons_defaultdarktheme.png" class="w-5 h-5">
+			<span class="text-[15px] font-medium text-black">Theme</span>
+		</div>
+		<div class="flex items-center gap-1.5">
+			<span class="text-sm text-gray-400">Light</span>
+			<svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+			</svg>
+		</div>
+	</a>
+</div>
+</div>
+
+<!-- Support & Help -->
+<div>
+<h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2.5 px-1">Support & Help</h3>
+<div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+	<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+		<div class="flex items-center gap-3.5">
+			<img src="material-symbols_book-outline (3).png" class="w-5 h-5">
+			<span class="text-[15px] font-medium text-black">Search FAQs</span>
+		</div>
+		<svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+		</svg>
+	</a>
+	<div class="border-t border-gray-100"></div>
+	<a href="contact-support.html" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+		<div class="flex items-center gap-3.5">
+			<img src="majesticons_home (8).png" class="w-5 h-5">
+			<span class="text-[15px] font-medium text-black">Contact Us</span>
+		</div>
+		<svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+		</svg>
+	</a>
+	<div class="border-t border-gray-100"></div>
+	<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+		<div class="flex items-center gap-3.5">
+			<img src="ic_round-privacy-tip.png" class="w-5 h-5">
+			<span class="text-[15px] font-medium text-black">Privacy Policy</span>
+		</div>
+		<svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+		</svg>
+	</a>
+	<div class="border-t border-gray-100"></div>
+	<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+		<div class="flex items-center gap-3.5">
+			<img src="material-symbols_delete-outline-rounded.png" class="w-5 h-5">
+			<span class="text-[15px] font-medium text-gray-500">Delete Account</span>
+		</div>
+		<svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+		</svg>
+	</a>
+	<div class="border-t border-gray-100"></div>
+	<a href="#" class="flex items-center justify-between px-4 py-4 active:bg-gray-50 transition">
+		<div class="flex items-center gap-3.5">
+			<img src="iconamoon_exit-light.png" class="w-5 h-5">
+			<span class="text-[15px] font-medium text-gray-500">Log out</span>
+		</div>
+		<svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+		</svg>
+	</a>
+</div>
+</div>
+</section>
+
+</div>
+
+<!-- Bottom Navigation -->
+<nav class="bottom-0 left-0 right-0 border-t border-gray-200 shadow-lg z-50">
+<div class="max-w-[390px] mx-auto px-[8px] pt-[6px]">
+<div class="flex items-center justify-around h-[60px]">
+
+<a href="eventdiscovery.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+	<img src="majesticons_home.png" class="w-[24px] h-[24px] text-gray-400">
+	<span class="text-[10px] font-medium text-gray-400">Discover</span>
+</a>
+
+<a href="favourites.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+	<img src="material-symbols_book-outline.png" class="w-[24px] h-[24px] text-gray-400">
+	<span class="text-[10px] font-medium text-gray-400">Favourites</span>
+</a>
+
+<!-- Active -->
+<a href="ticketview.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+	<div class="w-[40px] h-[40px] bg-[#E8622A] rounded-full flex items-center justify-center -mt-[14px] shadow">
+		<img src="ep_ticket (1).png" class="w-[24px] h-[24px]">
+	</div>
+</a>
+
+<a href="attendeealert.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+	<img src="material-symbols_book-outline (2).png" class="w-[24px] h-[24px]">
+	<span class="text-[10px] font-medium text-gray-400">Alerts</span>
+</a>
+
+<a href="profile.html" class="flex flex-col items-center gap-[3px] w-[64px]">
+	<img src="gg_profile.png" class="w-[24px] h-[24px]">
+	<span class="text-[10px] font-medium text-gray-400">Profile</span>
+</a>
+</div>
+</div>
+</nav>
+</body>
+</html>
