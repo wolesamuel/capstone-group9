@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notifications - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+body { font-family: 'Inter', sans-serif; }
+</style>
+</head>
+<body class="bg-white">
+<div class="flex h-screen overflow-hidden">
+
+<!-- Sidebar -->
+<aside class="flex w-64 bg-white border-r border-gray-200 flex-col hidden md:flex shrink-0 h-screen">
+<div class="p-6">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 flex items-center justify-center">
+<img src="Frame 31.png">
+</div>
+<span class="text-xl font-bold">Scanpass</span>
+</div>
+</div>
+
+<nav class="flex-1 px-4 space-y-2">
+<a href="organizer-dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (13).png" class="w-4 h-4">
+Dashboard
+</a>
+<a href="event-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (1).png" class="w-4 h-4">
+Event
+</a>
+<a href="analytics-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (2).png" class="w-4 h-4">
+Analytics
+</a>
+<a href="team-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (3).png" class="w-4 h-4">
+Team
+</a>
+<a href="profile-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+<img src="Icon (4).png" class="w-4 h-4">
+Profile
+</a>
+</nav>
+    <div class="p-4 border-t border-orange-200 space-y-2">
+    <a href="create-event.html">
+    <button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2.5 rounded-lg flex items-center justify-center gap-2">
+    <img src="Icon (5).png" class="w-4 h-4">
+        Create Event
+    </button>
+    </a>
+    <a href="settings-screen.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+    <img src="Container (7).png">
+    Settings
+    </a>
+    <a href="support-screen.html" class="flex items-center gap-3 pl-7 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50">
+    <img src="Container (8).png">
+    Support
+    </a>
+    </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto">
+    <div class="p-6 md:p-8 max-w-7xl mx-auto">
+
+    <!-- Top Bar -->
+    <div class="flex items-center justify-between mb-8">
+    <h1 class="text-2xl font-bold text-orange-700">Notifications</h1>
+    <div class="flex-1 max-w-md mx-6">
+        <div class="relative border border-orange-100 rounded-lg">
+        <img src="Icon (6).png" class="absolute left-3 top-3 w-5 h-5">
+        <input type="text" placeholder="Search events, staff..." 
+        class="w-full pl-10 pr-4 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-orange-200">
+        </div>
+    </div>
+    <div class="flex items-center gap-2">
+        <a href="notification.html">
+            <button class="p-2 hover:bg-gray-100 -mr-4">
+        <img src="material-symbols_book-outline (7).png">
+        </button>
+        </a>
+        <a href="support-screen.html">
+            <button class="p-2 hover:bg-gray-100">
+        <img src="Button (1).png" class="w-9 h-9">
+        </button>
+        </a>
+        <a href="profile-screen.html">
+                <div class="flex items-center gap-3 pl-4 border-l border-orange-200">
+            <div class="text-right">
+                <p class="text-sm font-semibold">Chisom Okoli</p>
+                <p class="text-xs text-gray-500">Event Manager</p>
+            </div>
+            <img src="Manager Avatar.png" class="w-10 h-10">
+        </div>
+        </a>
+</div>
+</div>
+
+<!-- Filter Tabs -->
+<div class="flex items-center justify-between mb-6 flex-wrap gap-3">
+    <div class="flex gap-6 flex-wrap">
+    <button class="px-6 border rounded-xl bg-orange-50 text-orange-700 border-orange-300 text-sm font-medium">All</button>
+    <button class="px-4 py-2 border rounded-lg border-gray-200 text-gray-700 hover:bg-gray-50 text-sm font-medium">Action needed (3)</button>
+    <button class="px-4 py-2 border rounded-lg border-gray-200 text-gray-700 hover:bg-gray-50 text-sm font-medium">Scanning (2)</button>
+    <button class="px-4 py-2 border rounded-lg border-gray-200 text-gray-700 hover:bg-gray-50 text-sm font-medium">Staff (1)</button>
+    <button class="px-4 py-2 border rounded-lg border-gray-200 text-gray-700 hover:bg-gray-50 text-sm font-medium">Updates (1)</button>
+    </div>
+    <button class="text-sm text-orange-700 hover:text-orange-800 font-medium flex items-center gap-2">
+    Mark all as read
+    <input type="checkbox" name="Mark" id="">
+    </svg>
+    </button>
+</div>
+
+<!-- Notifications List -->
+<div class="bg-white rounded-xl border border-gray-200 p-6">
+
+    <!-- Action Needed -->
+    <div class="mb-8">
+    <h3 class="text-sm font-semibold text-red-600 mb-4">Action needed</h3>
+    <div class="space-y-4">
+        
+        <!-- Notification 1 -->
+        <div class="flex items-start gap-4 p-3 hover:bg-gray-50 rounded-lg">
+        <div class="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center shrink-0">
+        <img src="Fame 407.png">
+        </div>
+        <div class="flex-1">
+            <p class="font-semibold text-sm text-gray-900">Invalid Ticket Attempt</p>
+            <p class="text-xs text-gray-600">A suspicious or unrecognized ticket was scanned at Gate B.</p>
+        </div>
+        <span class="text-xs text-gray-500 whitespace-nowrap">2 mins ago</span>
+        <button class="px-4 py-1.5 bg-red-50 text-red-600 text-[10px] rounded-lg hover:bg-red-100">Investigate</button>
+        <div class="w-2.5 h-2.5 bg-red-500 rounded-full mt-2 shrink-0"></div>
+        </div>
+
+        <!-- Notification 2 -->
+        <div class="flex items-start gap-4 p-3 hover:bg-gray-50 rounded-lg">
+        <div class="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center shrink-0">
+            <img src="Fame 407 (1).png">
+        </div>
+        <div class="flex-1">
+            <p class="font-semibold text-sm text-gray-900">Payment Failed</p>
+            <p class="text-xs text-gray-600">An attendee's payment could not be completed.</p>
+        </div>
+        <span class="text-xs text-gray-500 whitespace-nowrap">5 mins ago</span>
+        <button class="px-4 py-1.5 bg-red-50 text-red-600 text-[10px] font-medium rounded-lg hover:bg-red-100">Investigate</button>
+        <div class="w-2.5 h-2.5 bg-red-500 rounded-full mt-2 shrink-0"></div>
+        </div>
+
+        <!-- Notification 3 -->
+        <div class="flex items-start gap-4 p-3 hover:bg-gray-50 rounded-lg">
+        <div class="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center shrink-0">
+           <img src="Fame 407 (2).png" alt="">
+        </div>
+        <div class="flex-1">
+            <p class="font-semibold text-sm text-gray-900">Offline Scans Pending</p>
+            <p class="text-xs text-gray-600">24 check-ins were saved offline and will sync when internet returns.</p>
+        </div>
+        <span class="text-xs text-gray-500 whitespace-nowrap">6 mins ago</span>
+        <button class="px-4 py-1.5 bg-red-50 text-red-600 text-[10px] font-medium rounded-lg hover:bg-red-100">Investigate</button>
+        <div class="w-2.5 h-2.5 bg-red-500 rounded-full mt-2 shrink-0"></div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Scanning Activity -->
+    <div class="mb-8">
+    <h3 class="text-sm font-semibold text-blue-600 mb-4">Scanning Activity</h3>
+    <div class="space-y-4">
+        
+        <!-- Notification 4 -->
+        <div class="flex items-start gap-4 p-3 hover:bg-gray-50 rounded-lg">
+        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
+            <img src="Fame 407 (4).png" alt="">
+        </div>
+        <div class="flex-1">
+            <p class="font-semibold text-sm text-gray-900">Ticket Scanned</p>
+            <p class="text-xs text-gray-600">Ticket for Joyce Amani (VIP) was scanned at Gate A.</p>
+        </div>
+        <span class="text-xs text-gray-500 whitespace-nowrap">8 mins ago</span>
+        <button class="px-4 py-1.5 bg-blue-50 text-blue-600 text-[10px] font-medium rounded-lg hover:bg-blue-100">View Check-in</button>
+        <div class="w-2.5 h-2.5 bg-blue-600 rounded-full mt-2 shrink-0"></div>
+        </div>
+
+        <!-- Notification 5 -->
+        <div class="flex items-start gap-4 p-3 hover:bg-gray-50 rounded-lg">
+        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
+           <img src="Fame 407 (5).png" alt="">
+        </div>
+        <div class="flex-1">
+            <p class="font-semibold text-sm text-gray-900">Attendee Checked In</p>
+            <p class="text-sm text-gray-600">David John was successfully checked in.</p>
+        </div>
+        <span class="text-xs text-gray-500 whitespace-nowrap">13 mins ago</span>
+        <button class="px-4 py-1.5 bg-blue-50 text-blue-600 text-[10px] font-medium rounded-lg hover:bg-blue-100">View Attendance</button>
+        <div class="w-2.5 h-2.5 bg-blue-600 rounded-full mt-2 shrink-0"></div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Staff Activity -->
+    <div class="mb-8">
+    <h3 class="text-sm font-semibold text-green-600 mb-4">Staff Activity</h3>
+    <div class="space-y-4">
+        
+        <!-- Notification 6 -->
+        <div class="flex items-start gap-4 p-3 hover:bg-gray-50 rounded-lg">
+        <div class="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center shrink-0">
+            <img src="Fame 407 (6).png">
+        </div>
+        <div class="flex-1">
+            <p class="font-semibold text-sm text-gray-900">Staff Scan Login</p>
+            <p class="text-xs text-gray-600">Ade Joseph has started scanning at Gate B.</p>
+        </div>
+        <span class="text-xs text-gray-500 whitespace-nowrap">15 mins ago</span>
+        <button class="px-4 py-1.5 bg-green-50 text-green-600 text-[10px] font-medium rounded-lg hover:bg-green-100">View Staff Activity</button>
+        <div class="w-2.5 h-2.5 bg-green-500 rounded-full mt-2 shrink-0"></div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Updates -->
+    <div>
+    <h3 class="text-sm font-semibold text-orange-600 mb-4">Updates</h3>
+    <div class="space-y-4">
+        
+        <!-- Notification 7 -->
+        <div class="flex items-start gap-4 p-3 hover:bg-gray-50 rounded-lg">
+        <div class="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center shrink-0">
+            <img src="Fame 407 (7).png" alt="">
+        </div>
+        <div class="flex-1">
+            <p class="font-semibold text-sm text-gray-900">Event Starts Soon</p>
+            <p class="text-xs text-gray-600">Your event starts in 2 hours. Review scanner access and staff roles.</p>
+        </div>
+        <span class="text-xs text-gray-500 whitespace-nowrap">30 mins ago</span>
+        <button class="px-4 py-1.5 bg-orange-50 text-orange-600 text-[10px] font-medium rounded-lg hover:bg-orange-100">Prepare Event</button>
+        <div class="w-2.5 h-2.5 bg-orange-500 rounded-full mt-2 shrink-0"></div>
+        </div>
+    </div>
+    </div>
+
+    <!-- View All -->
+    <div class="text-center mt-8">
+        <a href="notification.html">
+    <button class="text-sm text-orange-700 hover:text-orange-800 font-medium inline-flex items-center gap-2">
+        View all notifications
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+    </button>
+    </a>
+    </div>
+
+</div>
+
+</div>
+</main>
+</div>
+</body>
+</html>

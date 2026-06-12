@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScanPass - Interests</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white min-h-screen flex justify-center font-sans">
+  <div class="w-full max-w-sm px-6 py-8 flex-col min-h-screen flex">
+    
+    <div class="flex justify-end mb-2">
+      <a href="#" id="skipBtn" class="text-gray-600 text-sm font-medium">Skip ></a>
+    </div>
+
+    <div class="mb-6">
+      <h1 class="text-3xl font-bold text-black leading-tight mb-3">What sparks your interest?</h1>
+      <p class="text-base leading-relaxed">
+        Select at least 3 categories to personalize your event feed. We'll find the best workshops, conferences, and meetups for you.
+      </p>
+      <p id="counter" class="text-sm text-gray-500 mt-2">Select at least 3 categories</p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 flex-1 mb-6">
+      
+      <!-- CHANGE: border-gray-300 bg-white instead of orange -->
+      <button class="flex category-btn border shadow-md border-gray-300 bg-white rounded-xl p-6 flex-col items-center justify-center gap-2 transition" data-cat="Tech & AI">
+        <img src="Frame.png" class="w-6 h-6"/>
+        <span class="text-sm font-medium text-black">Tech & AI</span>
+      </button>
+
+      <button class="flex category-btn border shadow-md  border-gray-300 bg-white rounded-xl p-6 flex-col items-center justify-center gap-2 transition" data-cat="Sports">
+        <img src="fluent_sport-basketball-20-filled.png" class="w-6 h-6"/>
+        <span class="text-sm font-medium text-black">Sports</span>
+      </button>
+
+      <button class="flex category-btn border shadow-md  border-gray-300 bg-white rounded-xl p-6 flex-col items-center justify-center gap-2 transition" data-cat="Business">
+        <img src="ph_trend-up-bold.png" class="w-6 h-6"/>
+        <span class="text-sm font-medium text-black">Business</span>
+      </button>
+
+      <button class="flex category-btn border shadow-md  border-gray-300 bg-white rounded-xl p-6 flex-col items-center justify-center gap-2 transition" data-cat="Design">
+         <img src="iconoir_design-nib.png" class="w-6 h-6"/>
+        <span class="text-sm font-medium text-black">Design</span>
+      </button>
+
+      <button class="flex category-btn border shadow-md  border-gray-300 bg-white rounded-xl p-6 flex-col items-center justify-center gap-2 transition" data-cat="Music">
+         <img src="ri_music-fill.png" class="w-6 h-6"/>
+        <span class="text-sm font-medium text-black">Music</span>
+      </button>
+
+      <button class="flex category-btn border shadow-md  border-gray-300 bg-white rounded-xl p-6 flex-col items-center justify-center gap-2 transition" data-cat="Networking">
+        <img src="ic_baseline-groups-2.png" class="w-6 h-6"/>
+        <span class="text-sm font-medium text-black">Networking</span>
+      </button>
+
+      <button class="flex category-btn border shadow-md  border-gray-300 bg-white rounded-xl p-6 flex-col items-center justify-center gap-2 transition" data-cat="Food">
+        <img src="fluent_food-24-filled.png" class="w-6 h-6"/>
+        <span class="text-sm font-medium text-black">Food</span>
+      </button>
+
+      <button class="flex category-btn border shadow-md  border-gray-300 bg-white rounded-xl p-6 flex-col items-center justify-center gap-2 transition" data-cat="Arts">
+        <img src="fluent-emoji-high-contrast_performing-arts.png" class="w-6 h-6"/>
+        <span class="text-sm font-medium text-black">Arts</span>
+      </button>
+
+      <button class="flex category-btn border shadow-md  border-gray-300 bg-white rounded-xl p-6 flex-col items-center justify-center gap-2 transition" data-cat="Science">
+       <img src="Frame (1).png" class="w-6 h-6"/>
+        <span class="text-sm font-medium text-black">Science</span>
+      </button>
+
+      <button class="flex category-btn border shadow-md  border-gray-300 bg-white rounded-xl p-6 flex-col items-center justify-center gap-2 transition" data-cat="Wellness">
+         <img src="Frame (2).png" class="w-6 h-6"/>
+        <span class="text-sm font-medium text-black">Wellness</span>
+      </button>
+
+      <button class="flex category-btn border shadow-md  border-gray-300 bg-white rounded-xl p-6 flex-col items-center justify-center gap-2 transition" data-cat="Education">
+        <img src="Frame (3).png" class="w-6 h-6"/>
+        <span class="text-sm font-medium text-black">Education</span>
+      </button>
+
+      <button class="flex category-btn border shadow-md border-gray-300 bg-white rounded-xl p-6 flex-col items-center justify-center gap-2 transition" data-cat="Startup">
+        <img src="streamline_startup-solid.png" class="w-6 h-6"/>
+        <span class="text-sm font-medium text-black">Startup</span>
+      </button>
+
+    </div>
+
+    <button id="continueBtn" disabled class="w-full bg-gray-300 text-gray-600 font-semibold py-4 rounded-xl transition">
+      Continue
+    </button>
+  </div>
+
+<script>
+const categoryBtns = document.querySelectorAll('.category-btn');
+const continueBtn = document.getElementById('continueBtn');
+const counter = document.getElementById('counter');
+let selected = [];
+
+categoryBtns.forEach(btn => {
+  btn.onclick = () => {
+    const cat = btn.dataset.cat;
+    
+    if(btn.classList.contains('selected')) {
+      // Deselect
+      btn.classList.remove('selected', 'border-[#E8622A]', 'bg-orange-50');
+      btn.classList.add('border-gray-300', 'bg-white');
+      selected = selected.filter(c => c !== cat);
+    } else {
+      // Select
+      btn.classList.add('selected', 'border-[#E8622A]', 'bg-orange-50');
+      btn.classList.remove('border-gray-300', 'bg-white');
+      selected.push(cat);
+    }
+    
+    // Update counter + button
+    if(selected.length >= 3) {
+      continueBtn.disabled = false;
+      continueBtn.classList.remove('bg-gray-300', 'text-gray-600');
+      continueBtn.classList.add('bg-[#E8622A]', 'text-white');
+      counter.textContent = `${selected.length} selected ✓`;
+      counter.classList.add('text-[#E8622A]');
+    } else {
+      continueBtn.disabled = true;
+      continueBtn.classList.add('bg-gray-300', 'text-gray-600');
+      continueBtn.classList.remove('bg-[#E8622A]', 'text-white');
+      counter.textContent = `Select ${3 - selected.length} more`;
+      counter.classList.remove('text-[#E8622A]');
+    }
+  }
+});
+
+continueBtn.onclick = () => {
+  if(selected.length >= 3) {
+    localStorage.setItem('userInterests', JSON.stringify(selected));
+    window.location.href = 'eventdiscovery.html';
+  }
+}
+
+document.getElementById('skipBtn').onclick = (e) => {
+  e.preventDefault();
+  localStorage.setItem('userInterests', JSON.stringify([]));
+  window.location.href = 'eventdiscovery.html';
+}
+</script>
+</body>
+</html>

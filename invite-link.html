@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>Invite Link - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white antialiased">
+<div class="w-full max-w-[390px] mx-auto min-h-screen px-5 pt-11 pb-8 flex-col">
+
+<!-- Header -->
+<header class="pt-1 h-14 flex items-center justify-center relative mb-4">
+  <a href="staff-login.html" class="absolute left-0 w-8 h-8 flex items-center justify-center -ml-2 active:bg-gray-100 rounded-full transition" aria-label="Back">
+    <img src="material-symbols_arrow-back.png" class="w-6 h-6">
+  </a>
+  <h1 class="text-2xl font-bold text-black">Invite Link</h1>
+</header>
+
+<!-- Content -->
+<div class="flex-1">
+  <h2 class="text-3xl font-bold text-black mb-2">You've Been Invited!</h2>
+  <p class="text- text-gray-600 mb-8 w-[300px] leading-relaxed">
+    Join the event team and start managing attendee check-ins.
+  </p>
+
+  <!-- Form -->
+  <form action="staff-dashboard.html" method="POST" class="space-y-5">
+
+    <!-- Paste Invite Link -->
+    <div>
+      <label for="invite-link" class="block text- font-medium text-black mb-2">Paste Invite Link</label>
+      <div class="relative border rounded-xl">
+        <img src="material-symbols_mail-outline (1).png" class="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5">
+        <input
+          type="url"
+          id="invite-link"
+          name="invite_link"
+          required
+          class="w-full h-12 pl-11 pr-4 border-gray-300 rounded-xl text- text-black placeholder-gray-400 focus:outline-none focus:border-[#E8622A] focus:ring-1 focus:ring-[#E8622A] transition"
+          placeholder="Invite link"
+        >
+      </div>
+    </div>
+
+    <!-- Accept Invite Button -->
+    <div>
+      <button
+        type="submit"
+        class="w-full h-12 bg-[#E8622A] rounded-xl text-white font-semibold text- active:scale- active:bg-[#D95A24] transition"
+      >
+        Accept Invite
+      </button>
+      <p class="text-xs text-center text-gray-400 mt-2">
+        For security purposes, invite links can only be used once.
+      </p>
+    </div>
+  </form>
+</div>
+</div>
+</body>
+</html>

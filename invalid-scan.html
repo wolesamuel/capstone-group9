@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>Invalid Scan - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white antialiased">
+<div class="w-full max-w-[390px] mx-auto min-h-screen flex-col">
+
+<!-- Header -->
+<header class="pt-11 px-5 h-14 flex items-center relative mb-8">
+<a href="alert.html" class="absolute left-5 w-8 h-8 flex items-center justify-center -ml-2 active:bg-gray-100 rounded-full transition" aria-label="Back">
+<img src="material-symbols_arrow-back.png" class="w-6 h-6">
+</a>
+<h1 class="text-lg font-semibold text-black mx-auto">Invalid Scan</h1>
+</header>
+
+<!-- Content -->
+<div class="flex-1 px-6 pb-24 flex-col items-center">
+
+<!-- Red Circle X Icon -->
+<div class="mb-6">
+<div class="flex items-center justify-center">
+    <img src="ix_error-filled (1).png" class="w-20 h-20 text-white">
+</div>
+
+<!-- Title + Subtitle -->
+<h2 class="text-xl font-bold text-black text-center mb-2">Ticket Verification Failed!</h2>
+<p class="font-semibold text-center mb-8 w-[320px] px-4">The QR code could not be verified by the system.</p>
+
+<!-- Details Card -->
+<div class="w-full bg-white border-gray-200 rounded-xl p-5 space-y-4 mb-8">
+<div class="flex justify-between items-center">
+    <span>Ticket ID</span>
+    <span class="font-semibold">Unknown</span>
+</div>
+<div class="flex justify-between items-center">
+    <span>Scanner</span>
+    <span class="font-semibold">Terminal A12</span>
+</div>
+<div class="flex justify-between items-center">
+    <span>Gate</span>
+    <span class="font-semibold">Gate 2</span>
+</div>
+<div class="flex justify-between items-center">
+    <span>Time</span>
+    <span class="font-semibold">7:35 PM</span>
+</div>
+</div>
+
+<!-- CTA Buttons -->
+<div class="w-full space-y-3">
+<!-- Retry Scan -->
+<a href="scanner.html" class="w-full bg-[#E8622A] text-white font-semibold text-base py-3 rounded-lg text-center flex items-center justify-center gap-2 active:bg-[#d55a26] transition">
+    <img src="mdi_reload.png" class="w-5 h-5">
+    Retry Scan
+</a>
+
+<!-- Contact Supervisor -->
+<a href="help.html" class="w-full border-2 border-[#E8622A] text-[#E8622A] font-semibold text-base py-3 rounded-lg text-center flex items-center justify-center gap-2 active:bg-orange-50 transition">
+    <img src="ic_baseline-phone.png" class="w-5 h-5">
+    Contact Supervisor
+</a>
+</div>
+</div>
+
+<!-- Bottom Nav -->
+<nav class="fixed bg-orange-50 shadow-3xl bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[390px] bg-white border-t border-gray-200 px-6 py-2">
+  <div class="flex justify-between items-center">
+    <a href="check-in-history.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="material-symbols_book-outline (6).png" class="w-6 h-6">
+      <span class="text-xs">History</span>
+    </a>
+    <a href="alert.html" class="flex-col items-center gap-1 text-gray-400">
+   <img src="material-symbols_book-outline (2).png" class="w-6 h-6">
+      <span class="text-xs">Alerts</span>
+    </a>
+    <a href="scanner.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="Home (1).png" class="w-10 h-10">
+    </a>
+    <a href="help.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="material-symbols_book-outline (3).png" class="w-6 h-6">
+      <span class="text-xs">Help</span>
+    </a>
+    <a href="staff-profile.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="material-symbols_book-outline (5).png" class="w-6 h-6">
+      <span class="text-xs">Profile</span>
+    </a>
+  </div>
+</nav>
+
+</div>
+</body>
+</html>

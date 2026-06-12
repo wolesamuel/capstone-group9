@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Failed Payment - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: '#E8622A',
+          error: '#EF4444'
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-white antialiased">
+<main class="w-full max-w-[390px] mx-auto min-h-screen pt-3 px-6 pb-8 flex-col">
+
+  <!-- Back -->
+  <header class="mb-8">
+    <a href="paymentscreen.html" class="inline-flex" aria-label="Go back">
+      <img src="material-symbols_arrow-back.png" alt="">
+    </a>
+  </header>
+
+  <!-- Content - Center -->
+  <section class="flex-1 flex-col items-center justify-center text-center">
+
+    <!-- Error Icon -->
+    <div class="flex items-center justify-center mb-8">
+      <div class="flex items-center justify-center">
+        <img src="Frame 455.png" alt="">
+      </div>
+    </div>
+
+    <!-- Title -->
+    <h1 class="text-2xl font-bold text-black mb-3">
+      Failed Payment
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="leading-6 max-w-[280px] mb-16">
+      Your payment could not be completed.<br>
+      Please check your internet connection and try again.
+    </p>
+  </section>
+
+  <!-- Actions - Bottom -->
+  <section class="space-y-3 mt-auto">
+    <!-- Retry → back to payment screen -->
+    <a href="paymentscreen.html"
+      class="block w-full bg-brand hover:bg-[#D4551F] active:bg-[#C24D1C] text-white font-semibold py-3 rounded-xl text-base text-center transition-colors"
+    >
+      Retry Payment
+    </a>
+
+    <!-- Cancel → back to tickets or home -->
+    <a href="ticketview.html"
+      class="block w-full border-2 border-brand text-brand hover:bg-brand/5 font-semibold py-3 rounded-xl text-base text-center transition-colors"
+    >
+      Cancel
+    </a>
+  </section>
+</main>
+</body>
+</html>

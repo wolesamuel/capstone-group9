@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>ScanPass - Search Location</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .home-indicator { width: 134px; height: 5px; background: black; border-radius: 100px; }
+    
+    .backdrop-light {
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+    }
+    
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+    .sheet-animate {
+      animation: slideUp 0.3s ease-out;
+    }
+    
+    /* Safe area for iPhone notch */
+    .safe-top {
+      padding-top: env(safe-area-inset-top);
+    }
+  </style>
+</head>
+<body class="bg-white font-sans">
+  
+  <!-- 1. SKIP - Mobile header bar style -->
+  <div class="fixed top-0 left-0 right-0 z-50 safe-top">
+    <div class="max-w-md mx-auto px-6 py-4">
+      <div class="flex justify-end">
+        <a href="interest.html" class="text-gray-600 text-base font-medium">Skip ></a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 2. BACKGROUND PAGE -->
+  <div class="min-h-screen px-6 pt-16 pb-8 max-w-md mx-auto">
+    <h1 class="text-3xl font-bold text-black mb-3">Where do you want to attend events most?</h1>
+    <p class="text-base text-gray-600 mb-8">
+      We'll use your location to recommend nearby events, faster check-ins, and relevant updates.
+    </p>
+    
+    <img src="location-illustration.png" alt="location" class="w-56 mx-auto mb-8"/>
+    
+    <button class="w-full bg-[#E8622A] text-white font-semibold py-4 rounded-xl opacity-50">
+      Select Location
+    </button>
+    
+    <div class="flex justify-center mt-6">
+      <div class="home-indicator"></div>
+    </div>
+  </div>
+
+  <!-- 3. OVERLAY + SHEET -->
+  <div id="overlay" class="fixed inset-0 z-40 flex justify-center">
+    <div id="backdrop" class="absolute inset-0 bg-black bg-opacity-30 backdrop-light"></div>
+    
+    <div class="absolute bottom-0 w-full max-w-md bg-white rounded-t-3xl px-6 pt-3 pb-8 sheet-animate">
+      <div class="flex justify-center mb-4">
+        <div class="w-10 h-1 bg-gray-300 rounded-full"></div>
+      </div>
+
+      <h2 class="text-xl font-bold text-black mb-4">Search a Location</h2>
+
+      <div class="relative mb-6">
+        <svg class="absolute left-3 top-3.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="M21 21l-4.35-4.35"></path>
+        </svg>
+        <input id="searchInput" type="text" placeholder="Search..." class="w-full border-gray-300 rounded-lg pl-10 pr-4 py-3 text-base focus:outline-none focus:border-[#E8622A]">
+      </div>
+
+      <div id="locationList" class="space-y-0">
+        <button class="location-btn w-full text-left py-4 text-base text-black border-b border-gray-200" data-city="Lagos">Lagos</button>
+        <button class="location-btn w-full text-left py-4 text-base text-black border-b border-gray-200" data-city="Port-Harcourt">Port-Harcourt</button>
+        <button class="location-btn w-full text-left py-4 text-base text-black border-b border-gray-200" data-city="Abuja">Abuja</button>
+        <button class="location-btn w-full text-left py-4 text-base text-black py-4" data-city="Oyo">Oyo</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const from = params.get('from');
+
+const searchInput = document.getElementById('searchInput');
+const backdrop = document.getElementById('backdrop');
+
+searchInput.addEventListener('input', (e) => {
+  const search = e.target.value.toLowerCase().trim();
+  document.querySelectorAll('.location-btn').forEach(btn => {
+    const city = btn.dataset.city.toLowerCase();
+    btn.style.display = city.includes(search) ? 'block' : 'none';
+  });
+});
+
+document.querySelectorAll('.location-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const city = btn.dataset.city;
+    localStorage.setItem('userCity', city);
+    
+    if(from === 'signup') {
+      window.location.href = 'interest.html';
+    } else {
+      window.location.href = 'interest.html';
+    }
+  });
+});
+
+backdrop.addEventListener('click', () => {
+  window.history.back();
+});
+</script>
+</body>
+</html>

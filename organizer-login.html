@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+<div class="min-h-screen flex items-center justify-center p-4">
+<div class="flex flex-col md:flex-row w-full max-w-6xl rounded-2xl overflow-hidden shadow-2xl">
+
+<!-- Left Gradient Column -->
+<div class="relative m-10 flex rounded-lg md:w-1/2 bg-gradient-to-br from-orange-500 via-amber-400 to-red-600 p-8 md:p-12 flex-col justify-between text-white min-h-[300px] md:min-h-[700px]">
+<div class="flex items-center gap-3">
+    <!-- ScanPass Logo -->
+    <div class="rounded-lg flex items-center justify-center backdrop-blur">
+    <img src="Frame 31.png" class="w-18 h-18">
+    </div>
+    <span class="text-2xl font-bold">ScanPass</span>
+</div>
+<div class="absolute top-40 left-80 pl-20">
+    <img src="Students or employees adding events or deadlines to calendar app 1 (1).png">
+</div>
+<div>
+    <h1 class="text-2xl md:text-2xl font-bold mb-4 leading-tight">
+    Jump right back in
+    </h1>
+    <p class="text-md opacity-90 w-[380px]">
+    Use your work email for better event management and access control.
+    </p>
+</div>
+</div>
+
+<!-- Right Form Column -->
+<div class="md:w-1/2 p-8 md:p-12">
+<div class="flex items-center gap-2 mb-2">
+    <div class="w-12 h-12 rounded flex items-center justify-center">
+    <img src="Logo (1).png">
+    </div>
+</div>
+
+<h2 class="text-3xl md:text-4xl font-semibold mb-1">Welcome back,</h2>
+<p class="text-gray-500 mb-8">Log in to continue to ScanPass</p>
+
+ <form action="organizer-dashboard.html" method="get" class="space-y-5">
+    <!-- Email -->
+    <div>
+    <label class="block font-medium mb-2 text-gray-900">Email Address</label>
+    <div class="relative border rounded-xl border-2">
+        <img src="material-symbols_mail-outline.png" class="absolute left-3 top-3.5 w-5 h-5">
+        <input type="email" id="email" placeholder="name@gmail.com" required
+        class="w-full border-gray-300 rounded-lg pl-10 pr-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+    </div>
+    </div>
+
+    <!-- Password -->
+    <div>
+    <label class="block font-medium mb-2 text-gray-900">Password</label>
+    <div class="relative border rounded-xl border-2">
+        <img src="majesticons_home (3).png" class="absolute left-3 top-3.5 w-5 h-5">
+        <input type="password" id="password" placeholder="**********" required
+        class="w-full border-gray-300 rounded-lg pl-10 pr-10 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+        <button type="button" id="toggle-password" class="absolute right-3 top-3.5 text-gray-400 hover:text-gray-600">
+        </button>
+    </div>
+    </div>
+
+    <!-- Remember + Forgot -->
+    <div class="flex items-center justify-between text-sm">
+    <label class="flex items-center gap-2 cursor-pointer">
+        <input type="checkbox" id="remember" class="rounded text-orange-500 focus:ring-orange-500">
+        <span class="text-gray-700">Remember Me</span>
+    </label>
+    <a href="#" class="text-blue-600 hover:underline">Forgot Password?</a>
+    </div>
+
+    <!-- Button -->
+    <button type="submit"
+    class="w-full bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white font-semibold py-3 rounded-lg shadow-lg transition">
+    Sign in
+    </button>
+
+
+    <!-- Divider -->
+    <div class="flex items-center gap-4 text-gray-400 text-sm my-6">
+    <div class="flex-1 h-px bg-gray-200"></div>
+    Or continue with
+    <div class="flex-1 h-px bg-gray-200"></div>
+    </div>
+
+    <!-- Social buttons -->
+    <div class="grid grid-cols-2 gap-4">
+    <button type="button" class="border border-gray-300 rounded-lg py-3 flex justify-center hover:bg-gray-50 transition">
+        <img src="logos_google-icon.png" class="w-5 h-5">
+    </button>
+    <button type="button" class="border border-gray-300 rounded-lg py-3 flex justify-center hover:bg-gray-50 transition">
+        <img src="f7_logo-apple.png" class="w-5 h-5">
+    </button>
+    </div>
+</form>
+
+<p class="text-xs text-gray-500 mt-8 text-center">
+    By creating an account you agree to ScanPass's
+    <a href="#" class="text-orange-500 hover:underline">Terms of Service</a> and
+    <a href="#" class="text-orange-500 hover:underline">Privacy Policy</a>
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
