@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>Contact Supervisor - ScanPass</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white antialiased">
+<div class="w-full max-w-[390px] mx-auto min-h-screen flex-col">
+
+<!-- Header -->
+<header class="pt-11 px-5 h-14 flex items-center relative pb-4 mb-6">
+<a href="invalid-scan.html">
+<button class="absolute left-5 w-8 h-8 flex items-center justify-center -ml-2 active:bg-gray-100 rounded-full transition" aria-label="Back">
+<img src="material-symbols_arrow-back.png" class="w-6 h-6 mb-8">
+</button>
+</a>
+<h1 class="text-lg font-semibold mx-auto">Contact Supervisor</h1>
+</header>
+
+<!-- Content -->
+<div class="flex-1 px-5 pb-24">
+
+<!-- Alert Banner -->
+<div class="bg-orange-50 border-orange-100 rounded-lg p-3 flex gap-3 mb-6">
+	<img src="bxs_error.png" class="w-10 h-10">
+	<div>
+		<p class="font-semibold text-black text-base">Need help resolving this issue?</p>
+		<p class="text-sm">Send a report to your supervisor.</p>
+	</div>
+</div>
+
+<!-- Success Toast - Hidden by default -->
+<div id="successToast" class="hidden mb-4 bg-green-50 border-green-200 rounded-lg p-3 flex items-center gap-2">
+	<svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+		<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+	</svg>
+	<span class="text-sm font-medium text-green-800">Report sent successfully to supervisor</span>
+</div>
+
+<!-- Form -->
+<form id="reportForm" class="space-y-5">
+
+	<!-- Issue Type -->
+	<div>
+		<label class="block text-base font-medium text-black mb-2">Issue type</label>
+		<select id="issueType" class="w-full px-4 py-3 border border-gray-300 rounded-lg text-base text-black focus:outline-none focus:border-[#E8622A] focus:ring-1 focus:ring-[#E8622A]">
+			<option value="Invalid Ticket">Invalid Ticket</option>
+			<option value="Duplicate Ticket">Duplicate Ticket</option>
+			<option value="Scanner Offline">Scanner Offline</option>
+			<option value="Network Issue">Network Issue</option>
+			<option value="Other">Other</option>
+		</select>
+	</div>
+
+	<!-- Subject -->
+	<div>
+		<label class="block text-base font-medium text-black mb-2">Subject</label>
+		<input type="text" id="subject" required
+			class="border w-full px-4 py-3 border-gray-300 rounded-lg text-base text-black focus:outline-none focus:border-[#E8622A] focus:ring-1 focus:ring-[#E8622A]">
+	</div>
+
+	<!-- Description -->
+	<div>
+		<label class="block text-base font-medium text-black mb-2">Describe the issue</label>
+		<div class="relative">
+			<textarea id="description" rows="4" maxlength="200" required
+				class="border w-full px-4 py-3 border-gray-300 rounded-lg text-base text-black focus:outline-none focus:border-[#E8622A] focus:ring-1 focus:ring-[#E8622A] resize-none"></textarea>
+			<span id="charCount" class="absolute bottom-3 right-3 text-sm text-gray-400">0/200</span>
+		</div>
+	</div>
+
+	<!-- Buttons -->
+	<div class="space-y-3 pt-2">
+		<!-- Send Report -->
+		<button type="submit" class="w-full bg-[#E8622A] text-white font-semibold text-base py-2.5 rounded-md flex items-center justify-center gap-2 active:bg-[#d55a26] transition disabled:opacity-50 disabled:cursor-not-allowed">
+			<img src="tabler_send.png" class="w-5 h-5">
+			<span id="btnText">Send Report</span>
+		</button>
+
+		<!-- Call Supervisor -->
+		<a href="tel:+2348000000" class="w-full border-2 border-[#E8622A] text-[#E8622A] font-semibold text-base py-2.5 rounded-md flex items-center justify-center gap-2 active:bg-orange-50 transition">
+			<img src="ic_baseline-phone.png" class="w-5 h-5">
+			Call Supervisor
+		</a>
+	</div>
+</form>
+</div>
+
+<!-- Bottom Nav -->
+<nav class="fixed bg-orange-50 shadow-3xl bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[390px] bg-white border-t border-gray-200 px-6 py-2">
+  <div class="flex justify-between items-center">
+    <a href="check-in-history.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="material-symbols_book-outline (6).png" class="w-6 h-6">
+      <span class="text-xs">History</span>
+    </a>
+    <a href="alert.html" class="flex-col items-center gap-1 text-gray-400">
+   <img src="material-symbols_book-outline (2).png" class="w-6 h-6">
+      <span class="text-xs">Alerts</span>
+    </a>
+    <a href="scanner.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="Home (1).png" class="w-10 h-10">
+    </a>
+    <a href="help.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="material-symbols_help (1).png" class="w-6 h-6">
+      <span class="text-xs text-[#E8622A]">Help</span>
+    </a>
+    <a href="staff-profile.html" class="flex-col items-center gap-1 text-gray-400">
+      <img src="material-symbols_book-outline (5).png" class="w-6 h-6">
+      <span class="text-xs">Profile</span>
+    </a>
+  </div>
+</nav>
+
+</div>
+
+<script>
+// Get URL params from alert-detail
+const params = new URLSearchParams(window.location.search);
+const ticketId = params.get('ticketId') || 'Unknown';
+const gate = params.get('gate') || 'Gate 2';
+const type = params.get('type') || 'Invalid Ticket';
+
+// Auto-fill form
+document.getElementById('issueType').value = type;
+document.getElementById('subject').value = `Ticket Scan Issue at ${gate}`;
+document.getElementById('description').value = `The attendee's ticket ${ticketId} could not be verified after multiple scan attempts.`;
+
+// Character counter
+const descInput = document.getElementById('description');
+const charCount = document.getElementById('charCount');
+
+function updateCounter() {
+const len = descInput.value.length;
+charCount.textContent = `${len}/200`;
+charCount.className = len > 180? 'absolute bottom-3 right-3 text-sm text-red-500' : 'absolute bottom-3 right-3 text-sm text-gray-400';
+}
+
+descInput.addEventListener('input', updateCounter);
+updateCounter(); // init
+
+// Send Report action
+document.getElementById('reportForm').addEventListener('submit', function(e) {
+e.preventDefault();
+
+const btn = this.querySelector('button[type="submit"]');
+const btnText = document.getElementById('btnText');
+const toast = document.getElementById('successToast');
+
+// Disable button + show loading
+btn.disabled = true;
+btnText.textContent = 'Sending...';
+
+// Simulate API call
+setTimeout(() => {
+	// Show success
+	toast.classList.remove('hidden');
+
+	// Reset button
+	btn.disabled = false;
+	btnText.textContent = 'Send Report';
+
+	// Hide toast + go back after 2s
+	setTimeout(() => {
+		history.back();
+	}, 2000);
+
+	console.log('Report sent:', {
+		issueType: document.getElementById('issueType').value,
+		subject: document.getElementById('subject').value,
+		description: document.getElementById('description').value,
+		ticketId: ticketId,
+		gate: gate,
+		time: new Date().toISOString()
+	});
+}, 1000);
+});
+</script>
+</body>
+</html>
